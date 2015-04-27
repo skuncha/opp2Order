@@ -5,8 +5,8 @@ import net.thucydides.core.annotations.findby.By;
 import net.thucydides.core.pages.PageObject;
 import net.thucydides.core.pages.WebElementFacade;
 
-//@DefaultUrl("https://test.salesforce.com/")
-@DefaultUrl("https://dmgsalescloud--systemtest.cs8.my.salesforce.com/")
+@DefaultUrl("https://test.salesforce.com/")
+//@DefaultUrl("https://dmgsalescloud--systemtest.cs8.my.salesforce.com/")
 
 public class loginPage extends PageObject {
 
