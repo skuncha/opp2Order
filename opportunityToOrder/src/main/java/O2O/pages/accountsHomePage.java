@@ -63,7 +63,7 @@ public class accountsHomePage extends PageObject{
 	private WebElementFacade CCICustomerMail()   {  return element(By.cssSelector("input[value='Create CCI Customer-Mail']"));		}
 	private WebElementFacade accountsMapping()   { 	return element(By.partialLinkText("AM-"));	    								}
 	private WebElementFacade customerRef() 		 {  return element(By.xpath("//*[@id='ep']/div[2]/div[2]/table/tbody/tr[4]/td[2]"));}
-	private WebElementFacade financeAccount()    { 	return element(By.partialLinkText("-Mail Advertising"));	    				}
+	private WebElementFacade financeAccount()    { 	return element(By.partialLinkText("- Mail"));	    							}
 	private WebElementFacade privateFinanceAcc() { 	return element(By.partialLinkText("BT60JH"));	    							}
 	private WebElementFacade SOPid() 		 	 {  return element(By.xpath("//*[@id='ep']/div[2]/div[2]/table/tbody/tr[9]/td[2]"));}
 	private WebElementFacade CCIid() 		 	 {  return element(By.xpath("//*[@id='ep']/div[2]/div[2]/table/tbody/tr[5]/td[4]"));}
