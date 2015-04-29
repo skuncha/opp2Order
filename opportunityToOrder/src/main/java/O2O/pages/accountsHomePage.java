@@ -65,7 +65,7 @@ public class accountsHomePage extends PageObject{
 	private WebElementFacade customerRef() 		 {  return element(By.xpath("//*[@id='ep']/div[2]/div[2]/table/tbody/tr[4]/td[2]"));}
 	private WebElementFacade financeAccount()    { 	return element(By.partialLinkText("- Mail"));	    							}
 	private WebElementFacade privateFinanceAcc() { 	return element(By.partialLinkText("BT60JH"));	    							}
-	private WebElementFacade SOPid() 		 	 {  return element(By.xpath("//*[@id='ep']/div[2]/div[2]/table/tbody/tr[9]/td[2]"));}
+	private WebElementFacade SOPid() 		 	 {  return element(By.xpath("//*[@id='ep']/div[2]/div[2]/table/tbody/tr[6]/td[4]"));}
 	private WebElementFacade CCIid() 		 	 {  return element(By.xpath("//*[@id='ep']/div[2]/div[2]/table/tbody/tr[5]/td[4]"));}
 	
 	@FindBy(css="//a[@id='001M000000jV6Vk_00ND0000005jggc_link']/span") 
@@ -195,7 +195,7 @@ public class accountsHomePage extends PageObject{
 		CCICustomerMail().click();
 		waitFor(2).seconds();
 		getDriver().switchTo().alert().accept();
-		waitFor(15).seconds();
+		waitFor(12).seconds();
 		getDriver().switchTo().alert().accept();
 	}
 	public boolean isAccountMappingSuccessful() {
@@ -216,7 +216,7 @@ public class accountsHomePage extends PageObject{
 
 	public void accountMapping() {
 
-		waitFor(5).seconds();
+		waitFor(3).seconds();
 		accountsMapping().click();
 	}
 	
