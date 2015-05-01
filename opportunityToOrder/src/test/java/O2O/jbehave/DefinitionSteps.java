@@ -80,6 +80,14 @@ public class DefinitionSteps {
     public void customerRecrodShouldBeCreatedSuccessfully(){
     	salesExecutive.recrodShouldBeCreatedSuccessfully();
     }
+    @When("Sales Executive makes Billing Agency association with client")
+    public void associateAgency(){
+    	salesExecutive.associateBillingAgency();
+    }
+    @Then("Sales Executive should be able to create Agency association with client successfully")
+    public void associationSuccessfull(){
+    	
+    }
     @When("Sales Executive clicks on 'new Contact' button to create contact record for customer:$ContactTable")
     public void createContactforCustomer(ExamplesTable ContactTable){
     	Map<String, String> contactMandValues = new HashMap<String, String>();

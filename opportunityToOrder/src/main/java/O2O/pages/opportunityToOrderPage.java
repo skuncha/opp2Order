@@ -29,7 +29,8 @@ public class opportunityToOrderPage extends PageObject  {
 	private WebElementFacade selectOppType() 		{ 		return element(By.name("j_id0:opportunityForm:j_id60:j_id61:j_id90:j_id94")); 					}
 	private WebElementFacade selectOppContactRole() { 		return element(By.name("j_id0:opportunityForm:j_id60:j_id61:j_id115:j_id119")); 				}
 	private WebElementFacade selectContact1() 		{ 		return element(By.name("j_id0:opportunityForm:j_id60:j_id61:j_id108:j_id112"));					}
-	private WebElementFacade selectBillingAgency() 	{ 		return element(By.name("//*[@id='j_id0:opportunityForm:j_id60:j_id61:j_id79:agencyFieldPanel']/select/option[2]"));	}
+	private WebElementFacade selectBillingAgency() 	{ 		return element(By.xpath("//*[@id='j_id0:opportunityForm:j_id60:j_id61:j_id79:agencyFieldPanel']/select/option[2]"));	}
+	private WebElementFacade selectBillingAgency1() { 		return element(By.xpath("//*[@id='j_id0:opportunityForm:j_id60:j_id61:j_id79:j_id84:agencyFieldPanel']/select/option[2]"));	}
 	private WebElementFacade selectNewBusinessCB() 	{ 		return element(By.name("j_id0:opportunityForm:j_id60:j_id61:j_id137")); 						}
 	private WebElementFacade clickOppSaveBtn() 		{ 		return element(By.name("j_id0:opportunityForm:j_id60:j_id202")); 								}
 	private WebElementFacade clickOppEditBtn() 		{ 		return element(By.name("j_id0:opportunityForm:j_id60:j_id204")); 								}
@@ -122,7 +123,6 @@ public class opportunityToOrderPage extends PageObject  {
 	private WebElementFacade clickOnEditOppLineImgBtn()		 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id197:singleInsertionPanel']/table/tbody/tr/td[2]/img"));}
 	private WebElementFacade clickOnCancelOppLineImgBtn()	 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id197:singleInsertionPanel']/table/tbody/tr/td[4]/img"));}*/
 	
-	
 	public void clickOnOpportunityToOrder(){
 		waitFor(3).seconds();
 		clickOnOppToOrderBtn().click();
@@ -146,6 +146,7 @@ public class opportunityToOrderPage extends PageObject  {
 					enterOppCloseDate().type(record.get("oppCloseDate")); 
 					enterOppEstdVal().type(record.get("oppEstdValue"));	
 					selectOppType().selectByVisibleText(record.get("oppType"));
+					selectBillingAgency().click();
 					selectOppContactRole().selectByVisibleText(record.get("oppContactRole")); 
 //					selectNewBusinessCB().selectByVisibleText(record.get("oppName"));  
 //					selectContact().selectByVisibleText(record.get("oppContactRole")); 		

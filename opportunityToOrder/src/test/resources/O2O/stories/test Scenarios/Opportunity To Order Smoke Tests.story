@@ -236,6 +236,8 @@ And  Sales Executive clicks on Save button
 When Sales Executive integrates customer account with CCI
 And  Sales Executive clicks on a record under Account Mapping Tab
 Then Sales Executive should see customer account mapping details returned from CCI when verified
+When Sales Executive makes Billing Agency association with client
+Then Sales Executive should be able to create Agency association with client successfully
 When Sales Executive clicks on 'Opportunity To Order' link to create Opportunity
 And  Sales Executive supplies input data from CSV [file] to create Opportunity
 Then Sales Executive should be able to create Opportunity successfully

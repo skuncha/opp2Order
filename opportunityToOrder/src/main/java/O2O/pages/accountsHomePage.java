@@ -30,6 +30,7 @@ public class accountsHomePage extends PageObject{
 	public static String customerAccount;
 	public static String customerAccountName;
 	public static String contactFullName;
+	public static String clientURL;
 	/****************** Define Elements of Accounts Tab **************************************************************************/
 	
 	private WebElementFacade accountsTab()       { 	return element(By.partialLinkText("Accounts"));	    						}
@@ -48,13 +49,17 @@ public class accountsHomePage extends PageObject{
 	private WebElementFacade billingStreet()     { 	return element(By.cssSelector("#acc17street"));       				}
 	private WebElementFacade billingPostCode()   { 	return element(By.cssSelector("#acc17zip"));						}
 	private WebElementFacade saveCustomerRecord(){  return element(By.xpath("//*[@id='topButtonRow']/input[1]"));		}
-	private WebElementFacade newContact()     { 	return element(By.name("newContact"));								}
+	private WebElementFacade newContact()        { 	return element(By.name("newContact"));								}
 	private WebElementFacade contactFirstName()  { 	return element(By.name("name_firstcon2"));							}
 	private WebElementFacade contactLastName()   { 	return element(By.name("name_lastcon2"));							}
 	private WebElementFacade customerName()   	 { 	return element(By.id("con4"));										}
 	private WebElementFacade contactEmail()   	 { 	return element(By.name("con15"));									}
 	private WebElementFacade saveContact()       { 	return element(By.name("save"));									}
 	private WebElementFacade navigateToAccnt()   { 	return element(By.xpath("//tbody/tr/td[2]/div[4]/div[2]/div[2]/table/tbody/tr[2]/td[2]/div/a"));}
+	private WebElementFacade newRelationship()   { 	return element(By.cssSelector("input[value='New Relationship']"));	}
+	private WebElementFacade relationB()		 {  return element(By.name("CF00ND0000003g0n9"));						}
+	private WebElementFacade relationRole()		 {  return element(By.name("00ND0000003g0nB"));							}
+	private WebElementFacade saveAssocitaion()	 {  return element(By.xpath("//*[@id='bottomButtonRow']/input[1]"));	}
 	private WebElementFacade readAccountName()   { 	return element(By.xpath(".//*[@id='contactHeaderRow']/div[2]/h2")); }
 	private WebElementFacade mainCate()          { 	return element(By.name("j_id0:j_id1:j_id27:j_id36"));				}
 	private WebElementFacade subCate()           { 	return element(By.name("j_id0:j_id1:j_id27:subcategory"));			}
@@ -140,6 +145,38 @@ public class accountsHomePage extends PageObject{
 		customerAccountName = readAccountName().getText();
 		return readAccountName().getText();	
 	}
+	
+	public void associateClientWithBillingAgency(){
+		String searchKey = "xyzz";
+		
+		System.out.println(" Customer Account Name is :  " +customerAccountName);
+		clientURL = getDriver().getCurrentUrl();
+		accountsTab().click();
+		waitFor(4).seconds();
+		newBtn().click();
+		waitFor(3).seconds();
+		searchforcustomeraccount(searchKey);
+		clickOnNewBtnToCreateCustomerAccount();
+		selectRecrodTypeAndContinue("Agency");
+		waitFor(1).seconds();
+		accountName().type("Billing Agency "+timeNow);
+		phoneNumber().type("0123456789");
+    	billingStreet().type("Billing Street");
+    	billingPostCode().type("W8 5TT");
+    	saveCustomerRecord().click();
+    	waitFor(5).seconds();
+    	createCCICustomerMail();
+    	waitFor(4).seconds();
+    	newRelationship().click();
+    	waitFor(2).seconds();
+    	relationB().type(customerAccountName);
+    	relationRole().selectByVisibleText("Billing");
+    	saveAssocitaion().click();
+    	waitFor(2).seconds();
+    	getDriver().get(clientURL);
+    	waitFor(5).seconds();
+
+	}
 	public void openNewContactPage(){
 		customerAccount = getDriver().getCurrentUrl();
 		newContact().click();
@@ -195,7 +232,7 @@ public class accountsHomePage extends PageObject{
 		CCICustomerMail().click();
 		waitFor(2).seconds();
 		getDriver().switchTo().alert().accept();
-		waitFor(12).seconds();
+		waitFor(15).seconds();
 		getDriver().switchTo().alert().accept();
 	}
 	public boolean isAccountMappingSuccessful() {
