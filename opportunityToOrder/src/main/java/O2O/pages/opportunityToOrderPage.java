@@ -146,7 +146,7 @@ public class opportunityToOrderPage extends PageObject  {
 					enterOppCloseDate().type(record.get("oppCloseDate")); 
 					enterOppEstdVal().type(record.get("oppEstdValue"));	
 					selectOppType().selectByVisibleText(record.get("oppType"));
-					selectBillingAgency().click();
+//					selectBillingAgency().click();
 					selectOppContactRole().selectByVisibleText(record.get("oppContactRole")); 
 //					selectNewBusinessCB().selectByVisibleText(record.get("oppName"));  
 //					selectContact().selectByVisibleText(record.get("oppContactRole")); 		
@@ -163,12 +163,14 @@ public class opportunityToOrderPage extends PageObject  {
 	public void selectAgencyToBeBilled(String CustomerAccount){
 		
 		if (CustomerAccount.equalsIgnoreCase("Brand") || CustomerAccount.equalsIgnoreCase("Client")){
-			waitFor(1).second();
+			waitFor(2).second();
+			try{
 			selectBillingAgency().click();
+			}catch (Exception nosuchelement) { }
 		}
 	}
 	public void validateOppotunityRecord(){
-		
+		waitFor(1).second();
 		clickOppSaveBtn().click();
 		waitFor(10).seconds();
 		
@@ -193,11 +195,11 @@ public class opportunityToOrderPage extends PageObject  {
 		selectPublication().selectByVisibleText(record.get("publication"));
 		waitFor(5).seconds();
 		selectSection().selectByVisibleText(record.get("section"));
-		waitFor(5).seconds();
+		waitFor(6).seconds();
 		selectSubSection().selectByVisibleText(record.get("subsection"));
 		waitFor(5).seconds();
 		selectZones().selectByVisibleText(record.get("zones"));
-		waitFor(8).seconds();
+		waitFor(5).seconds();
 		enterInsertionDate().typeAndTab(record.get("insertionDate"));
 		waitFor(1).seconds();
 		selectSize().selectByVisibleText(record.get("size"));

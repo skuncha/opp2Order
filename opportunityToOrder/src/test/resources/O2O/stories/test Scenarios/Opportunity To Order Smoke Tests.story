@@ -250,4 +250,3 @@ Then Sales Executive should be able to open Order plugin with Opportunity Line d
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.mail.systemtest	|test1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
-
