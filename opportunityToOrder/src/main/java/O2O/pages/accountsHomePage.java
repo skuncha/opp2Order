@@ -170,7 +170,7 @@ public class accountsHomePage extends PageObject{
     	newRelationship().click();
     	waitFor(2).seconds();
     	relationB().type(customerAccountName);
-    	relationRole().selectByVisibleText("Billing");
+    	relationRole().selectByVisibleText("Booking"); // User should have booking agency association otherwise agency details will not appear while creating opp
     	saveAssocitaion().click();
     	waitFor(2).seconds();
     	getDriver().get(clientURL);

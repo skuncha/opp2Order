@@ -1,16 +1,7 @@
-
-Narrative:
-In order to Create a Billing Agency Accounts
-As a Sales Reprasentative
-I want to login to SalesforceGlue and able to create a 'Billing Agency Account'
-
-Scenario: Sales Executive will be able to create opportunityToOrder for a customer type Brand whose parent is Client 
+Scenario: Sales Executive will be able to create opportunityToOrder for a customer type Brand whose parent is Client
 
 Meta:
-@skip
-@author Srinivasa Kuncha
-@tags feature: OpportunityToOrder
-
+@skip 
 Given Sales Executive is on the Salesfoce Login Page
 When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
 When  Sales Executive clicks on 'Accounts' Tab on glue Home page
