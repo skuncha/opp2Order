@@ -79,7 +79,6 @@ public class opportunityToOrderPage extends PageObject  {
 	private WebElementFacade selectSize() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id210:j_id214:0:j_id311:0:j_id312:j_id343:j_id345")); 			}
 	private WebElementFacade enterSizeColumns() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id210:j_id214:0:j_id311:0:j_id312:j_id343:j_id348")); 			}
 	private WebElementFacade enterSizeCMs() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id210:j_id214:0:j_id311:0:j_id312:j_id343:j_id350")); 			}
-	private WebElementFacade selectContact() 		{		return element(By.name("j_id0:opportunityToPrintForm:j_id210:j_id214:0:fieldsSection:j_id271:j_id277"));				}
 	
 	/*private WebElementFacade selectTitle() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id293:0:j_id294:j_id298")); 	}
 	private WebElementFacade selectPublication() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id293:1:j_id294:j_id298")); 	}
@@ -206,7 +205,6 @@ public class opportunityToOrderPage extends PageObject  {
 		waitFor(1).seconds();
 		enterInsertionPO().type(record.get("insertionPO"));
 		waitFor(1).seconds();
-		selectContact().selectByVisibleText("Srini Test - Name");
 				} catch (Exception e1) {}
 			}
 		}
