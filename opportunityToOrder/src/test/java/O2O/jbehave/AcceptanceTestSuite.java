@@ -15,7 +15,7 @@ public class AcceptanceTestSuite extends ThucydidesJUnitStories {
 	    caps.setCapability("browser", "chrome");
 	    caps.setCapability("browser_version", "39.0");
 	    caps.setCapability("os", "Windows");
-	    caps.setCapability("os_version", "Windows 7");
+	    caps.setCapability("os_version", "windows 7");
 	    caps.setCapability("browserstack.debug", "true");
 		
 		}
