@@ -80,9 +80,9 @@ public class DefinitionSteps {
     public void customerRecrodShouldBeCreatedSuccessfully(){
     	salesExecutive.recrodShouldBeCreatedSuccessfully();
     }
-    @When("Sales Executive makes Billing Agency association with client")
+    @When("Sales Executive makes Booking Agency association with client")
     public void associateAgency(){
-    	salesExecutive.associateBillingAgency();
+    	salesExecutive.associateBookingAgency();
     }
     @Then("Sales Executive should be able to create Agency association with client successfully")
     public void associationSuccessfull(){

@@ -1,30 +1,20 @@
 package O2O.pages;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.not;
-
 import java.util.Map;
-import java.util.NoSuchElementException;
-
-import org.apache.xpath.operations.NotEquals;
+import net.thucydides.core.pages.WebElementFacade;
+import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import net.thucydides.core.pages.PageObject;
-import net.thucydides.core.pages.WebElementFacade;
 
 import com.google.common.base.Function;
-
-import org.openqa.selenium.TimeoutException;
 
 /**
  * @author srinivasa.kuncha
  */
-public class accountsHomePage extends PageObject{
+public class accountsHomePage extends PageObject {
 	
 	long timeNow = System.currentTimeMillis();
 	public static String customerAccount;
@@ -55,6 +45,7 @@ public class accountsHomePage extends PageObject{
 	private WebElementFacade customerName()   	 { 	return element(By.id("con4"));										}
 	private WebElementFacade contactEmail()   	 { 	return element(By.name("con15"));									}
 	private WebElementFacade saveContact()       { 	return element(By.name("save"));									}
+	private WebElementFacade clickOnClone()      { 	return element(By.name("clone"));									}
 	private WebElementFacade navigateToAccnt()   { 	return element(By.xpath("//tbody/tr/td[2]/div[4]/div[2]/div[2]/table/tbody/tr[2]/td[2]/div/a"));}
 	private WebElementFacade newRelationship()   { 	return element(By.cssSelector("input[value='New Relationship']"));	}
 	private WebElementFacade relationB()		 {  return element(By.name("CF00ND0000003g0n9"));						}
@@ -146,7 +137,7 @@ public class accountsHomePage extends PageObject{
 		return readAccountName().getText();	
 	}
 	
-	public void associateClientWithBillingAgency(){
+	public void associateClientWithBookingAgency(){
 		String searchKey = "xyzz";
 		
 		System.out.println(" Customer Account Name is :  " +customerAccountName);
@@ -159,9 +150,9 @@ public class accountsHomePage extends PageObject{
 		clickOnNewBtnToCreateCustomerAccount();
 		selectRecrodTypeAndContinue("Agency");
 		waitFor(1).seconds();
-		accountName().type("Billing Agency "+timeNow);
+		accountName().type("Booking Agency "+timeNow);
 		phoneNumber().type("0123456789");
-    	billingStreet().type("Billing Street");
+    	billingStreet().type("DMGT Street");
     	billingPostCode().type("W8 5TT");
     	saveCustomerRecord().click();
     	waitFor(5).seconds();
@@ -182,13 +173,29 @@ public class accountsHomePage extends PageObject{
 		newContact().click();
 		waitFor(3).seconds();
 	}
+	
+	public void supplyMandatoryFieldsForContact1(Map<String, String> contactMandValues){
+		try {
+				for (int i=0; i<=100; i++)
+				{
+				contactFirstName().type(contactMandValues.get("firstName"));
+				contactLastName().type(contactMandValues.get("lastName") + " - " +timeNow);
+		    	contactEmail().type(contactMandValues.get("email"));
+		    	saveContact().click();
+		    	waitFor(4).second();
+		    	clickOnClone().click();
+		    	waitFor(3).second();
+				}			
+			} catch (Exception e) {e.printStackTrace();}
+	}
 		
 	public void supplyMandatoryFieldsForContact(Map<String, String> contactMandValues){
 		try {
 			contactFirstName().type(contactMandValues.get("firstName"));
 			contactLastName().type(contactMandValues.get("lastName"));
 	    	contactEmail().type(contactMandValues.get("email"));
-	    	waitFor(1).second();
+	    	waitFor(2).second();
+	
 		} catch (Exception e) {e.printStackTrace();}
 		contactFullName = contactMandValues.get("firstName").concat(" "+contactMandValues.get("lastName").concat(" - ").concat(customerAccountName));
 	}
@@ -217,7 +224,6 @@ public class accountsHomePage extends PageObject{
 		subCate().selectByVisibleText(subCategory);
 		waitFor(3).seconds();
 		minorCate().selectByVisibleText(minorCategory);
-	
 	}
 
 	public void createIndustryCategory() {

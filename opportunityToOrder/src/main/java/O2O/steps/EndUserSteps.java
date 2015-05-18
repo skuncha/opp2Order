@@ -89,9 +89,9 @@ public class EndUserSteps extends ScenarioSteps {
 		list.add(accountsPage.isCustomerRecrodCreated()); // 1. adding customer name to array list
 	}
 	
-	public void associateBillingAgency(){
+	public void associateBookingAgency(){
 		accountsHomePage accountsPage =getPages().get(accountsHomePage.class);
-		accountsPage.associateClientWithBillingAgency();
+		accountsPage.associateClientWithBookingAgency();
 	}
 	public void createNewContact(Map<String, String> contactMandValues) {
 		accountsHomePage accountsPage = getPages().get(accountsHomePage.class);

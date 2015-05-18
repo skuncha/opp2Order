@@ -186,8 +186,9 @@ public class opportunityToOrderPage extends PageObject  {
 			for (Map<String, String> record : testDataSrc.getData()) {
 				try {
 		selectBillingAgent().selectByVisibleText(record.get("billingAgent"));
+		waitFor(4).seconds();
 		selectPackage().selectByVisibleText(record.get("package"));
-		waitFor(5).seconds();
+		waitFor(4).seconds();
 		enterOrderPO().type(record.get("insertionPO"));
 		waitFor(1).seconds();
 //		selectTitle().selectByVisibleText(record.get("title"));
