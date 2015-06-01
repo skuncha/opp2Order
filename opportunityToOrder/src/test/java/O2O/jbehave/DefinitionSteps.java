@@ -33,6 +33,15 @@ public class DefinitionSteps {
     	salesExecutive.supplyCredentialsToLogin(username, password);
     }
     
+    @When(" Sales Executive set debug log on")
+    public void debuglog(){
+    	salesExecutive.setDebugLog();
+    }
+    @When("Sales Executive verify debug log")
+    public void verifydebuglog() throws Exception{
+    	salesExecutive.verifydebuglog();
+    }
+    
     @Then(" Sales Executive should be able to login to glue successfully")
     public void successfulLogin(){
     	salesExecutive.isLoginSuccessful();

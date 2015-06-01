@@ -1,8 +1,10 @@
 package O2O.pages;
 
 import java.util.Map;
+
 import net.thucydides.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.TimeoutException;
@@ -69,9 +71,57 @@ public class accountsHomePage extends PageObject {
 	@FindBy(css="//a[@id='001M000000jV6RG_00ND0000005WVcN_link']/span") 
 	WebElement financeAccountMapping;
 	
+	private WebElementFacade setupLink()  		{ 	return element(By.id("setupLink")); 								}
+	private WebElementFacade logs()  			{ 	return element(By.id("Logs_font")); 								}
+	private WebElementFacade debugLogs()		{ 	return element(By.id("ApexDebugLogs_font")); 						}
+	private WebElementFacade createNewLog()     { 	return element(By.id("Apex_Trace_List:monitoredUsersForm:newMonitoredUserButton")); }
+	private WebElementFacade setUserName()      { 	return element(By.id("UserLookupInput")); 							}
+	private WebElementFacade saveUserName()     { 	return element(By.name("save")); 									}
+	private WebElementFacade deleteAll()        { 	return element(By.id("Apex_Trace_List:traceForm:traceTable:j_id35:deleteAll")); 	}
+	
+	private WebElementFacade viewLogRec1()		{	return element(By.xpath("//*[@id='Apex_Trace_List:traceForm:traceTable:thetracetable:0:rowActions']/a[1]"));}
+	private WebElementFacade data1()				{	return element(By.xpath("//*[@id='ep']/div[2]/div[3]/table/tbody/tr[5]/td[2]/pre"));}
+	
 	
 	/****************** Define Elements of Accounts Tab **************************************************************************/
 
+	public void setUserDebugLog(){
+		setupLink().click();
+		waitFor(4).seconds();
+		logs().click();
+		waitFor(2).seconds();
+		debugLogs().click(); 
+		waitFor(4).seconds();
+		deleteAll().click();
+		waitFor(3).seconds();
+		deleteAll().click();
+		waitFor(3).seconds();
+		createNewLog().click();
+		waitFor(3).seconds();
+		setUserName().type("Srini Kuncha Admin");
+		waitFor(1).seconds();
+		saveUserName().click();
+		waitFor(3).seconds();
+		
+	}
+	
+	public String  verifyDebugLogdetails(){
+		/*setupLink().click();
+		waitFor(3).seconds();
+		logs().click();
+		waitFor(2).seconds();
+		debugLogs().click(); 
+		waitFor(3).seconds();*/
+		getDriver().get("https://dmgsalescloud--systest.cs7.my.salesforce.com/setup/ui/listApexTraces.apexp");
+		waitFor(3).seconds();
+		viewLogRec1().click();
+		waitFor(3).seconds();
+		String str = data1().getText();
+		String test[] = str.split("Number of SOQL queries:");
+		return test[1];
+		
+	}
+	
 	public void accountTabOnHomePage(){
 		accountsTab().click();
 		waitFor(5).seconds();
@@ -80,6 +130,7 @@ public class accountsHomePage extends PageObject {
 		newBtn().click();
 		waitFor(5).seconds();
 	}
+	
 	
 	public void searchforcustomeraccount(String accountName){
 		searchCustomerAcc().type(accountName);
@@ -238,7 +289,7 @@ public class accountsHomePage extends PageObject {
 		CCICustomerMail().click();
 		waitFor(2).seconds();
 		getDriver().switchTo().alert().accept();
-		waitFor(15).seconds();
+		waitFor(16).seconds();
 		getDriver().switchTo().alert().accept();
 	}
 	public boolean isAccountMappingSuccessful() {
