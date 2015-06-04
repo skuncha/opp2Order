@@ -8,14 +8,14 @@ import net.thucydides.jbehave.ThucydidesJUnitStories;
  * @author srinivasa.kuncha
  * @add - extends ThucydidesJUnitStories
  */
-public class SprintStoryRunner extends ThucydidesJUnitStories  {
+public class SprintStoryRunner extends ThucydidesJUnitStories {
 	
 	public SprintStoryRunner() {
 		
 		WebDriverConfigurer.configureDrivers();
 		
-//	findStoriesCalled("Test in Development.story");
-	findStoriesCalled("Opportunity To Order Smoke Tests.story");
+	findStoriesCalled("Test in Development.story");
+//	findStoriesCalled("Opportunity To Order Smoke Tests.story");
 //  findStoriesCalled("Advertiser Scenarios.story");
 //	findStoriesCalled("Create Order Scenarios.story");
 //	findStoriesCalled("Create Accounts Using CSV file.story");
