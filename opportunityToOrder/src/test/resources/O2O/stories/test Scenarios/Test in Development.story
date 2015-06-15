@@ -14,7 +14,7 @@ And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continu
 When  Sales Executive supply input as required to create customer account:
 |ElementName 	|ElementValue							|
 |accountType	|Direct Advertiser						|
-|accountName	|RegressionTest 						|
+|accountName	|Direct Advertiser						|
 |phoneNumber	|020 000000000							|
 |billingStreet	|DMGT Street							|
 |postCode		|BT60JH									|
@@ -59,7 +59,7 @@ And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continu
 When  Sales Executive supply input as required to create customer account:
 |ElementName 	|ElementValue							|
 |accountType	|Client									|
-|accountName	|RegressionTest 						|
+|accountName	|Client							|
 |phoneNumber	|020 000000000							|
 |billingStreet	|DMGT Street							|
 |postCode		|BT60JH									|

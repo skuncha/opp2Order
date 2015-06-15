@@ -160,12 +160,14 @@ public class opportunityToOrderPage extends PageObject  {
 							waitFor(10).seconds();
 							enterInsertionDate().typeAndTab(record.get("insertionDate"));
 							waitFor(1).seconds();
-							/*selectSize().selectByVisibleText(record.get("size"));
+						/*	selectSize().selectByVisibleText(record.get("size"));
 							waitFor(4).seconds();
 							enterInsertionPO().type(record.get("insertionPO"));
-							waitFor(1).seconds();*/
+							waitFor(1).seconds();
 							clickOppLineSave().click(); // 1
-							waitFor(10).seconds();
+							waitFor(10).seconds();*/
+							Thucydides.takeScreenshot();
+							
 						// }	
 				} catch (Exception e1) {// clickOppLineCancel().click();waitFor(3).seconds(); 
 	        	  						}    
@@ -173,10 +175,12 @@ public class opportunityToOrderPage extends PageObject  {
 			} 
 	}
 	public void validateOppotunityLineRecord(){
-		Thucydides.takeScreenshot();
+		
 		clickOppLineSave().click();
 		waitFor(15).seconds();
 		System.out.println("OppLine Creation successful --> :  "+getDriver().getCurrentUrl());
+		Thucydides.takeScreenshot();
+		
 	}
 	public void selectOpportunityLinesToConvertAsOrders(){
 /*		selectOppLineToBeConvertedCB().click();

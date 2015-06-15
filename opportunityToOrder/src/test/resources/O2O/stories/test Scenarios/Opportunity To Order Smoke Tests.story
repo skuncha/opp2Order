@@ -5,7 +5,7 @@ In order to Test OpportunityToOrder user journeys
 As a Sales Reprasentative
 I want to login to SalesforceGlue and able to create opportunities, opportunity lines and orders
 
-cenario: Sales Executive will be able to create opportunityToOrder for a Direct Advertiser
+Scenario: Sales Executive will be able to create opportunityToOrder for a Direct Advertiser
 
 Meta:
 @author Srinivasa Kuncha
@@ -21,7 +21,7 @@ And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continu
 When  Sales Executive supply input as required to create customer account:
 |ElementName 	|ElementValue							|
 |accountType	|Direct Advertiser						|
-|accountName	|RegressionTest 						|
+|accountName	|Direct Advertiser						|
 |phoneNumber	|020 000000000							|
 |billingStreet	|DMGT Street							|
 |postCode		|BT60JH									|
@@ -65,7 +65,7 @@ And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continu
 When  Sales Executive supply input as required to create customer account:
 |ElementName 	|ElementValue							|
 |accountType	|Brand									|
-|accountName	|RegressionTest 						|
+|accountName	|Brand parent DA 						|
 |parentaccount	|Srini Test								|
 |phoneNumber	|020 000000000							|
 |billingStreet	|DMGT Street							|
@@ -113,7 +113,7 @@ And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continu
 When  Sales Executive supply input as required to create customer account:
 |ElementName 	|ElementValue							|
 |accountType	|Charity								|
-|accountName	|RegressionTest 						|
+|accountName	|Charity 						|
 |phoneNumber	|020 000000000							|
 |billingStreet	|DMGT Street							|
 |postCode		|BT60JH									|
@@ -162,7 +162,7 @@ And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continu
 When  Sales Executive supply input as required to create customer account:
 |ElementName 	|ElementValue							|
 |accountType	|Direct Advertiser						|
-|accountName	|RegressionTest 						|
+|accountName	|Direct Advertiser 						|
 |phoneNumber	|020 000000000							|
 |billingStreet	|DMGT Street							|
 |postCode		|BT60JH									|
@@ -214,7 +214,7 @@ When  Sales Executive supply input as required to create customer account:
 |accountType	|Private Advertiser						|
 |salutation		|Mr.									|
 |firstname		|Srinivasa								|
-|accountName	|RegressionTest 						|
+|accountName	|Private Advertiser						|
 |phoneNumber	|020 000000000							|
 |billingStreet	|DMGT Street							|
 |postCode		|BT60JH									|
@@ -261,7 +261,7 @@ And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continu
 When  Sales Executive supply input as required to create customer account:
 |ElementName 	|ElementValue							|
 |accountType	|Brand									|
-|accountName	|RegressionTest 						|
+|accountName	|Brand parent Client 					|
 |parentaccount	|1430130968665 RegressionTest			|
 |phoneNumber	|020 000000000							|
 |billingStreet	|DMGT Street							|
@@ -311,7 +311,7 @@ And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continu
 When  Sales Executive supply input as required to create customer account:
 |ElementName 	|ElementValue							|
 |accountType	|Client									|
-|accountName	|RegressionTest 						|
+|accountName	|Client 								|
 |phoneNumber	|020 000000000							|
 |billingStreet	|DMGT Street							|
 |postCode		|BT60JH									|
