@@ -37,10 +37,10 @@ public class DefinitionSteps {
     public void debuglog(){
     	salesExecutive.setDebugLog();
     }
-    @When("Sales Executive verify debug log")
+ /*   @When("Sales Executive verify debug log")
     public void verifydebuglog() throws Exception{
     	salesExecutive.verifydebuglog();
-    }
+    }*/
     
     @Then(" Sales Executive should be able to login to glue successfully")
     public void successfulLogin(){

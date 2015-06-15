@@ -10,7 +10,7 @@ import net.thucydides.core.steps.ScenarioSteps;
 import O2O.pages.accountsHomePage;
 import O2O.pages.loginPage;
 import O2O.pages.opportunityToOrderPage;
-import O2O.pages.sendEmail;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -43,14 +43,14 @@ public class EndUserSteps extends ScenarioSteps {
 		accountsHomePage homePage =getPages().get(accountsHomePage.class);
 		homePage.setUserDebugLog();
 	}
-	public void verifydebuglog() throws Exception{
+	/*public void verifydebuglog() throws Exception{
 		accountsHomePage homePage =getPages().get(accountsHomePage.class);
 		String view = homePage.verifyDebugLogdetails();
 		debugList.add(view);
 //		System.out.println("  Number of SOQL queries: "+debugList.get(0));
 		sendEmail email =getPages().get(sendEmail.class);
 		email.test(debugList.get(0));
-	}
+	}*/
 
 	/*** Verify title of Glue Home Page  ***/
 	public void isLoginSuccessful() {
