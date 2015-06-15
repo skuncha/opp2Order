@@ -52,10 +52,10 @@ public class DefinitionSteps {
     	salesExecutive.clickOnAccountTab();
     }
     
-    @When("  Sales Executive clicks on 'New' button")
+/*    @When("  Sales Executive clicks on 'New' button")
     public void clickOnNewButtonUnderAccountsTab(){
     	salesExecutive.clickOnNewBtnUnderAccountsTab();
-    }
+    }*/
     @When("  Sales Executive search for an account on Account Search Screen using $searchAccountName")
     public void clickOnSearchButtonFromAccountsSearchScreen(String searchAccountName){
     	salesExecutive.searchForCustomerPreviousAccount(searchAccountName);

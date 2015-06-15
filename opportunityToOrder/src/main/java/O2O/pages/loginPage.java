@@ -24,7 +24,7 @@ public class loginPage extends PageObject {
 	public void submitLogin(){
 		
 		loginbutton().click();
-		waitFor(6).seconds();
+		waitFor(10).seconds();
 	}
 	
 }

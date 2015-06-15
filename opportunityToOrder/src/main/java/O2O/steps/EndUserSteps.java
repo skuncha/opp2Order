@@ -62,14 +62,15 @@ public class EndUserSteps extends ScenarioSteps {
 	public void clickOnAccountTab(){
 		accountsHomePage homePage =getPages().get(accountsHomePage.class);
 		homePage.accountTabOnHomePage();
-		assertThat(getDriver().getTitle(),is(equalTo("Accounts: Home ~ salesforce.com - Unlimited Edition")));
+		/*assertThat(getDriver().getTitle(),is(equalTo("Accounts: Home ~ salesforce.com - Unlimited Edition")));*/
+		assertThat(getDriver().getTitle(),is(equalTo("salesforce.com - Unlimited Edition")));
 	}
 	/*** Verify title of Search Customer Account Page  ***/
-	public void clickOnNewBtnUnderAccountsTab(){
+/*	public void clickOnNewBtnUnderAccountsTab(){
 		accountsHomePage homePage =getPages().get(accountsHomePage.class);
 		homePage.newButtonUnderAccountsTab();
 //		assertThat(getDriver().getPageSource().contains("Please enter either Customer Name or Post Code to start Account Search."), is(true));		
-	}
+	}*/
 	
 	public void searchForCustomerPreviousAccount(String accountName){
 		accountsHomePage customerAccountSearch =getPages().get(accountsHomePage.class);
@@ -179,9 +180,9 @@ public class EndUserSteps extends ScenarioSteps {
 	public void supplyInputForNewOpportunity(String file) throws Exception{
 		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
 		opp2OrderPage.createOpportunityUsingCSV(file);
-		opp2OrderPage.selectContactForOpportunity(list.get(1)); // Using Contact Name on Create New Opportunity Page
-		System.out.println("Account Name is ------------------------------------------->> "+AccountName);
 		opp2OrderPage.selectAgencyToBeBilled(AccountName);
+		opp2OrderPage.selectContactForOpportunity(list.get(1)); // Using Contact Name on Create New Opportunity Page
+//		System.out.println("Account Name is ------------------------------------------->> "+AccountName);
 	}
 
 	public void validateOppotunityRecord(){

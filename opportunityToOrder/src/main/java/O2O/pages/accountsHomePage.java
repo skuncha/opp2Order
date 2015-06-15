@@ -21,6 +21,8 @@ public class accountsHomePage extends PageObject {
 	long timeNow = System.currentTimeMillis();
 	public static String customerAccount;
 	public static String customerAccountName;
+	public static String bookingAccountName;
+	public static String bookingAccountPage;
 	public static String contactFullName;
 	public static String clientURL;
 	/****************** Define Elements of Accounts Tab **************************************************************************/
@@ -126,10 +128,10 @@ public class accountsHomePage extends PageObject {
 		accountsTab().click();
 		waitFor(5).seconds();
 	}
-	public void newButtonUnderAccountsTab(){
+/*	public void newButtonUnderAccountsTab(){
 		newBtn().click();
 		waitFor(5).seconds();
-	}
+	}*/
 	
 	
 	public void searchforcustomeraccount(String accountName){
@@ -194,9 +196,9 @@ public class accountsHomePage extends PageObject {
 		System.out.println(" Customer Account Name is :  " +customerAccountName);
 		clientURL = getDriver().getCurrentUrl();
 		accountsTab().click();
-		waitFor(4).seconds();
+		/*waitFor(4).seconds();
 		newBtn().click();
-		waitFor(3).seconds();
+		waitFor(3).seconds();*/
 		searchforcustomeraccount(searchKey);
 		clickOnNewBtnToCreateCustomerAccount();
 		selectRecrodTypeAndContinue("Agency");
@@ -207,12 +209,22 @@ public class accountsHomePage extends PageObject {
     	billingPostCode().type("W8 5TT");
     	saveCustomerRecord().click();
     	waitFor(5).seconds();
+    	bookingAccountPage = getDriver().getCurrentUrl();
     	createCCICustomerMail();
     	waitFor(4).seconds();
     	newRelationship().click();
     	waitFor(2).seconds();
     	relationB().type(customerAccountName);
     	relationRole().selectByVisibleText("Booking"); // User should have booking agency association otherwise agency details will not appear while creating opp
+    	saveAssocitaion().click();
+    	waitFor(3).seconds(); //2
+    	getDriver().get(bookingAccountPage);
+    	waitFor(3).seconds();
+    	bookingAccountName = readAccountName().getText();
+    	newRelationship().click();
+    	waitFor(2).seconds();
+    	relationB().type(bookingAccountName);
+    	relationRole().selectByVisibleText("Billing"); // User should have booking agency association otherwise agency details will not appear while creating opp
     	saveAssocitaion().click();
     	waitFor(2).seconds();
     	getDriver().get(clientURL);
@@ -289,7 +301,7 @@ public class accountsHomePage extends PageObject {
 		CCICustomerMail().click();
 		waitFor(2).seconds();
 		getDriver().switchTo().alert().accept();
-		waitFor(16).seconds();
+		waitFor(20).seconds();
 		getDriver().switchTo().alert().accept();
 	}
 	public boolean isAccountMappingSuccessful() {

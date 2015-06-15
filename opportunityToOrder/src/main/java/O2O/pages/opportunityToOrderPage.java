@@ -17,7 +17,7 @@ import net.thucydides.core.pages.WebElementFacade;
  */
 public class opportunityToOrderPage extends PageObject  {
 	
-	/******** Define Elements of Opportunity Registration Tab **********************************************************************************************/
+	/******** Define Elements of Opportunity Registration Tab *******************************************************************************************************************************************************************/
 	
 	private WebElementFacade clickOnOppToOrderBtn() { 		return element(By.cssSelector("input[value='Opportunity To Order']")); 							}
 	private WebElementFacade oppName() 				{ 		return element(By.name("j_id0:opportunityForm:j_id60:j_id61:j_id62:j_id66")); 					}
@@ -36,36 +36,15 @@ public class opportunityToOrderPage extends PageObject  {
 	private WebElementFacade clickOppEditBtn() 		{ 		return element(By.name("j_id0:opportunityForm:j_id60:j_id205")); 								}
 	private WebElementFacade clickOppDeleteBtn() 	{ 		return element(By.name("j_id0:opportunityForm:j_id60:j_id206")); 								}
 	
-	
-	/*private WebElementFacade oppName() 			{ 		return element(By.name("j_id0:opportunityForm:j_id47:j_id48:j_id49:j_id53")); 					}
-	private WebElementFacade selectOppStage() 		{ 		return element(By.name("j_id0:opportunityForm:j_id47:j_id48:j_id83:j_id87")); 					}
-	private WebElementFacade enterOppStartDate() 	{ 		return element(By.name("j_id0:opportunityForm:j_id47:j_id48:j_id125:j_id129")); 				}
-	private WebElementFacade enterOppEndDate() 		{ 		return element(By.name("j_id0:opportunityForm:j_id47:j_id48:j_id137:j_id141")); 				}
-	private WebElementFacade enterOppCloseDate() 	{ 		return element(By.name("j_id0:opportunityForm:j_id47:j_id48:j_id89:j_id93")); 					}
-	private WebElementFacade enterOppEstdVal()		{ 		return element(By.name("j_id0:opportunityForm:j_id47:j_id48:j_id143:j_id147")); 				}
-	private WebElementFacade selectOppType() 		{ 		return element(By.name("j_id0:opportunityForm:j_id47:j_id48:j_id77:j_id81")); 					}
-	private WebElementFacade selectOppContactRole() { 		return element(By.name("j_id0:opportunityForm:j_id47:j_id48:j_id102:j_id106")); 				}
-	private WebElementFacade selectContact1() 		{ 		return element(By.name("j_id0:opportunityForm:j_id47:j_id48:j_id95:j_id99"));					}
-	private WebElementFacade selectBillingAgency() 	{ 		return element(By.name("//*[@id='j_id0:opportunityForm:j_id47:j_id48:j_id66:agencyFieldPanel']/select/option[2]"));					}
-	private WebElementFacade selectNewBusinessCB() 	{ 		return element(By.name("j_id0:opportunityForm:j_id47:j_id48:j_id124")); 						}
-	private WebElementFacade clickOppSaveBtn() 		{ 		return element(By.name("j_id0:opportunityForm:j_id47:j_id189")); 								}
-	private WebElementFacade clickOppEditBtn() 		{ 		return element(By.name("j_id0:opportunityForm:j_id47:j_id191")); 								}
-	private WebElementFacade clickOppDeleteBtn() 	{ 		return element(By.name("j_id0:opportunityForm:j_id47:j_id192")); 								}*/
-	
 	/******** Define Elements of OpportunityLine Tab **********************************************************************************************************************/
 	private WebElementFacade clickOnNewOppLineBtn() { 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id213")); 										}
 	private WebElementFacade selectPackage() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:fieldsSection:j_id280:j_id283")); 		}
 	private WebElementFacade selectBillingAgent() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:fieldsSection:j_id261:j_id267")); 		}
+	private WebElementFacade selectBillingAgent1() 	{ 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id211:j_id215:0:fieldsSection:j_id261:line_billingAgentFieldPanel']/div/select/option[2]")); }
+	
 	private WebElementFacade enterOrderPO() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:fieldsSection:j_id289:j_id291")); 		}
 	private WebElementFacade enterSalesPrice()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:fieldsSection:j_id292:j_id296")); 		}
 	private WebElementFacade enterYield() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:fieldsSection:j_id297:j_id301")); 		}
-	
-	/*private WebElementFacade clickOnNewOppLineBtn(){ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id199")); 										}
-	private WebElementFacade selectPackage() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:fieldsSection:j_id272:j_id275")); 		}
-	private WebElementFacade selectBillingAgent() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:fieldsSection:j_id247:j_id253")); 		}
-	private WebElementFacade enterOrderPO() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:fieldsSection:j_id280:j_id282")); 		}
-	private WebElementFacade enterSalesPrice()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:fieldsSection:j_id283:priceInputId")); 	}
-	private WebElementFacade enterYield() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:fieldsSection:j_id287:yieldInputId")); 	}*/
 	
 	/******** Define Elements of DM Display Package  *******************************************************************************************************************************/
 	
@@ -80,35 +59,15 @@ public class opportunityToOrderPage extends PageObject  {
 	private WebElementFacade enterSizeCMs() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id339:j_id342")); 			}
 	private WebElementFacade enterSizeColumns() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id339:j_id344")); 			}
 	
-  /*private WebElementFacade selectTitle() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id293:0:j_id294:j_id298")); 	}
-	private WebElementFacade selectPublication() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id293:1:j_id294:j_id298")); 	}
-	private WebElementFacade selectSection() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id293:2:j_id294:j_id298")); 	}
-	private WebElementFacade selectSubSection() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id293:3:j_id294:j_id298")); 	}
-	private WebElementFacade selectZones() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id293:4:j_id294:j_id298")); 	}
-	private WebElementFacade enterInsertionDate()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id304:selectedInsertionDates"));	} //  example date format "19/03/2015"
-	private WebElementFacade enterInsertionPO() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id314:j_id317")); 			}
-	private WebElementFacade selectSize() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id318:j_id320")); 			}
-	private WebElementFacade enterSizeColumns() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id318:coloumnsInputId")); 	}
-	private WebElementFacade enterSizeCMs() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id318:cmsInputId")); 		}*/
-	
 	/******** Define Elements For MailPlus Package  ********************************************************************************************************************************/
 	
 	private WebElementFacade selectWebsite()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id304:1:j_id305:j_id309")); 	}
 	private WebElementFacade selectAdUnit()			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id304:4:j_id305:j_id309")); 	}
 	private WebElementFacade selectDateflexCB()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id326:j_id329")); 			}
-	private WebElementFacade clickOppLineCancel()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id361")); 										}
-	private WebElementFacade clickOppLineSave()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id366")); 										}
-	private WebElementFacade clickAddtoOppLine()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id369")); 										}
-	private WebElementFacade clickAddtoOppLineandCopy(){ 	return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id372")); 										}
-	
-	/*private WebElementFacade selectWebsite()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id293:1:j_id294:j_id298")); 	}
-	private WebElementFacade selectAdUnit()			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id293:4:j_id294:j_id298")); 	}
-	private WebElementFacade selectDateflexCB()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id310:j_id313")); 			}
-	private WebElementFacade selectDistribution()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id291:0:j_id292:j_id293:4:j_id294:j_id298")); 	}
-	private WebElementFacade clickOppLineCancel()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id329")); 										}
-	private WebElementFacade clickOppLineSave()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id334")); 										}
-	private WebElementFacade clickOppLineSaveNew()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id337")); 										}
-	private WebElementFacade clickOppLineSaveCopy()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id201:0:j_id340")); 										}*/
+	private WebElementFacade clickOppLineCancel()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id369")); 										}
+	private WebElementFacade clickOppLineSave()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id374")); 										}
+	private WebElementFacade clickAddtoOppLine()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id377")); 										}
+	private WebElementFacade clickAddtoOppLineandCopy(){ 	return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id380")); 										}
 	
 	/******** Define Elements of Opportunity Line which will be converted to Order in CCI ***************************************************************************************************/	
 
@@ -117,10 +76,7 @@ public class opportunityToOrderPage extends PageObject  {
 	private WebElementFacade clickOnEditOppLineImgBtn()		 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id211:singleInsertionPanel']/table/tbody/tr/td[2]/img"));}
 	private WebElementFacade clickOnCancelOppLineImgBtn()	 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id211:singleInsertionPanel']/table/tbody/tr/td[4]/img"));}
 	
-	/*private WebElementFacade selectOppLineToBeConvertedCB()	 { 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id466:0:j_id468")); 										 }
-	private WebElementFacade clickOnCreateSelectedLineinCCI(){ 		return element(By.name("j_id0:opportunityToPrintForm:j_id197:j_id611")); 												 }
-	private WebElementFacade clickOnEditOppLineImgBtn()		 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id197:singleInsertionPanel']/table/tbody/tr/td[2]/img"));}
-	private WebElementFacade clickOnCancelOppLineImgBtn()	 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id197:singleInsertionPanel']/table/tbody/tr/td[4]/img"));}*/
+/***********************************************************************************************************************************************************************************************************************************/
 	
 	public void clickOnOpportunityToOrder(){
 		waitFor(3).seconds();
@@ -145,10 +101,8 @@ public class opportunityToOrderPage extends PageObject  {
 					enterOppCloseDate().type(record.get("oppCloseDate")); 
 					enterOppEstdVal().type(record.get("oppEstdValue"));	
 					selectOppType().selectByVisibleText(record.get("oppType"));
-//					selectBillingAgency().click();
 					selectOppContactRole().selectByVisibleText(record.get("oppContactRole")); 
-//					selectNewBusinessCB().selectByVisibleText(record.get("oppName"));  
-//					selectContact().selectByVisibleText(record.get("oppContactRole")); 		
+	
 				} catch (Exception e1) {}
 			}
 		}
@@ -171,57 +125,66 @@ public class opportunityToOrderPage extends PageObject  {
 	public void validateOppotunityRecord(){
 		waitFor(1).second();
 		clickOppSaveBtn().click();
-		waitFor(10).seconds();
+		waitFor(15).seconds();
 		
 	}
 	public void clickOnNewOpportunityLine(){
 		clickOnNewOppLineBtn().click();
-		waitFor(5).seconds();
+		waitFor(2).seconds();
 	}
 	public void createOpportunityLineUsingCSV(String CSVfile) throws Exception {
 		File filePath = new File(CSVfile);
 		if (filePath.isFile()) {
 			String file = filePath.getAbsolutePath();
 			CSVTestDataSource testDataSrc = new CSVTestDataSource(file);
-			for (Map<String, String> record : testDataSrc.getData()) {
+			for (Map<String, String> record : testDataSrc.getData()) 
+			{
 				try {
-		selectBillingAgent().selectByVisibleText(record.get("billingAgent"));
-		waitFor(4).seconds();
-		selectPackage().selectByVisibleText(record.get("package"));
-		waitFor(4).seconds();
-		enterOrderPO().type(record.get("insertionPO"));
-		waitFor(1).seconds();
-//		selectTitle().selectByVisibleText(record.get("title"));
-		selectPublication().selectByVisibleText(record.get("publication"));
-		waitFor(5).seconds();
-		selectSection().selectByVisibleText(record.get("section"));
-		waitFor(6).seconds();
-		selectSubSection().selectByVisibleText(record.get("subsection"));
-		waitFor(5).seconds();
-		selectZones().selectByVisibleText(record.get("zones"));
-		waitFor(5).seconds();
-		enterInsertionDate().typeAndTab(record.get("insertionDate"));
-		waitFor(1).seconds();
-		selectSize().selectByVisibleText(record.get("size"));
-		waitFor(1).seconds();
-		enterInsertionPO().type(record.get("insertionPO"));
-		waitFor(1).seconds();
-				} catch (Exception e1) {}
-			}
-		}
+						/*if (record.get("accType").equalsIgnoreCase("Brand") || record.get("accType").equalsIgnoreCase("Client") || record.get("accType").equalsIgnoreCase("Direct Advertiser")) // 1
+						{ */
+					
+					        selectBillingAgent().selectByVisibleText(record.get("billingAgent"));
+							waitFor(4).seconds();
+							selectPackage().selectByVisibleText(record.get("package"));
+							waitFor(10).seconds();
+							enterOrderPO().type(record.get("insertionPO"));
+							waitFor(1).seconds();
+					//		selectTitle().selectByVisibleText(record.get("title"));
+							selectPublication().selectByVisibleText(record.get("publication"));
+							waitFor(10).seconds();
+							selectSection().selectByVisibleText(record.get("section"));
+							waitFor(10).seconds();
+							selectSubSection().selectByVisibleText(record.get("subsection"));
+							waitFor(10).seconds();
+							selectZones().selectByVisibleText(record.get("zones"));
+							waitFor(10).seconds();
+							enterInsertionDate().typeAndTab(record.get("insertionDate"));
+							waitFor(1).seconds();
+							/*selectSize().selectByVisibleText(record.get("size"));
+							waitFor(4).seconds();
+							enterInsertionPO().type(record.get("insertionPO"));
+							waitFor(1).seconds();*/
+							clickOppLineSave().click(); // 1
+							waitFor(10).seconds();
+						// }	
+				} catch (Exception e1) {// clickOppLineCancel().click();waitFor(3).seconds(); 
+	        	  						}    
+	          }
+			} 
 	}
 	public void validateOppotunityLineRecord(){
 		Thucydides.takeScreenshot();
 		clickOppLineSave().click();
-		waitFor(14).seconds();
+		waitFor(15).seconds();
+		System.out.println("OppLine Creation successful --> :  "+getDriver().getCurrentUrl());
 	}
 	public void selectOpportunityLinesToConvertAsOrders(){
-		selectOppLineToBeConvertedCB().click();
-		waitFor(4).seconds();
+/*		selectOppLineToBeConvertedCB().click();
+		waitFor(4).seconds();*/
 	}
 	public void convertApprovedOppLinesAsOrder(){
-		clickOnCreateSelectedLineinCCI().click();
-		waitFor(45).seconds();
+	/*	clickOnCreateSelectedLineinCCI().click();
+		waitFor(45).seconds();*/
 	}
 	
 }
