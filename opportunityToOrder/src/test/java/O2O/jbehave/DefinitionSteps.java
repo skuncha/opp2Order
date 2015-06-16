@@ -52,6 +52,11 @@ public class DefinitionSteps {
     	salesExecutive.clickOnAccountTab();
     }
     
+    @When("  Sales Executive navigate to Opportunity page")
+    public void navigateToOpportunityPage(){
+    	salesExecutive.accessOpportunityPage();
+    }
+    
 /*    @When("  Sales Executive clicks on 'New' button")
     public void clickOnNewButtonUnderAccountsTab(){
     	salesExecutive.clickOnNewBtnUnderAccountsTab();

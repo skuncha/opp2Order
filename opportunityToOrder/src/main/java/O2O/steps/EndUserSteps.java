@@ -65,6 +65,11 @@ public class EndUserSteps extends ScenarioSteps {
 		/*assertThat(getDriver().getTitle(),is(equalTo("Accounts: Home ~ salesforce.com - Unlimited Edition")));*/
 		assertThat(getDriver().getTitle(),is(equalTo("salesforce.com - Unlimited Edition")));
 	}
+	
+	public void accessOpportunityPage(){
+		accountsHomePage homePage =getPages().get(accountsHomePage.class);
+		homePage.openOpportunityPage();
+	}
 	/*** Verify title of Search Customer Account Page  ***/
 /*	public void clickOnNewBtnUnderAccountsTab(){
 		accountsHomePage homePage =getPages().get(accountsHomePage.class);

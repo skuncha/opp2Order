@@ -5,6 +5,27 @@ In order to Test OpportunityToOrder user journeys
 As a Sales Reprasentative
 I want to login to SalesforceGlue and able to create opportunities, opportunity lines and orders
 
+
+Scenario: Sales Executive will be able to create opportunityToOrder for a Direct Advertiser
+
+Meta:
+@author Srinivasa Kuncha
+@tags feature: OpportunityToOrder
+
+Given Sales Executive is on the Salesfoce Login Page
+When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
+When  Sales Executive clicks on 'Accounts' Tab on glue Home page
+When  Sales Executive navigate to Opportunity page
+When Sales Executive clicks on 'New Opportunity Line' button to create Opportunity line
+And  Sales Executive supplies input data from CSV [file] to create Opportunity Line
+Then Sales Executive should be able to create Opportunity Line successfully
+When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
+Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
+
+Examples:
+|username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
+|srinivasa.kuncha@mailnewspapers.co.uk.mail.systemtest	|test1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
+
 Scenario: Sales Executive will be able to create opportunityToOrder for a Direct Advertiser
 
 Meta:

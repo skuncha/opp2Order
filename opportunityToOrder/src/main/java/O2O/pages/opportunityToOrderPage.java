@@ -129,8 +129,8 @@ public class opportunityToOrderPage extends PageObject  {
 		
 	}
 	public void clickOnNewOpportunityLine(){
-		clickOnNewOppLineBtn().click();
-		waitFor(2).seconds();
+		/*clickOnNewOppLineBtn().click();
+		waitFor(2).seconds();*/
 	}
 	public void createOpportunityLineUsingCSV(String CSVfile) throws Exception {
 		File filePath = new File(CSVfile);
@@ -142,7 +142,8 @@ public class opportunityToOrderPage extends PageObject  {
 				try {
 						/*if (record.get("accType").equalsIgnoreCase("Brand") || record.get("accType").equalsIgnoreCase("Client") || record.get("accType").equalsIgnoreCase("Direct Advertiser")) // 1
 						{ */
-					
+							clickOnNewOppLineBtn().click();
+							waitFor(2).seconds();
 					        selectBillingAgent().selectByVisibleText(record.get("billingAgent"));
 							waitFor(4).seconds();
 							selectPackage().selectByVisibleText(record.get("package"));
@@ -166,6 +167,8 @@ public class opportunityToOrderPage extends PageObject  {
 							waitFor(1).seconds();
 							clickOppLineSave().click(); // 1
 							waitFor(10).seconds();*/
+							clickOppLineSave().click();
+							waitFor(15).seconds();
 							Thucydides.takeScreenshot();
 							
 						// }	
@@ -176,8 +179,8 @@ public class opportunityToOrderPage extends PageObject  {
 	}
 	public void validateOppotunityLineRecord(){
 		
-		clickOppLineSave().click();
-		waitFor(15).seconds();
+		/*clickOppLineSave().click();
+		waitFor(15).seconds();*/
 		System.out.println("OppLine Creation successful --> :  "+getDriver().getCurrentUrl());
 		Thucydides.takeScreenshot();
 		

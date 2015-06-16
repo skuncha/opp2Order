@@ -128,6 +128,11 @@ public class accountsHomePage extends PageObject {
 		accountsTab().click();
 		waitFor(5).seconds();
 	}
+	
+	public void openOpportunityPage(){
+		getDriver().get("https://dmgsalescloud--systemtest--c.cs8.visual.force.com/apex/OpportunityToOrder?oppId=006L00000070XDyIAM");
+		waitFor(5).seconds();
+	}
 /*	public void newButtonUnderAccountsTab(){
 		newBtn().click();
 		waitFor(5).seconds();
