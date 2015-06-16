@@ -130,7 +130,7 @@ public class accountsHomePage extends PageObject {
 	}
 	
 	public void openOpportunityPage(){
-		getDriver().get("https://dmgsalescloud--systemtest--c.cs8.visual.force.com/apex/OpportunityToOrder?oppId=006L00000070XDyIAM");
+		getDriver().get("https://dmgsalescloud--systemtest--c.cs8.visual.force.com/apex/OpportunityToOrder?oppId=006L00000070XH3IAM");
 		waitFor(5).seconds();
 	}
 /*	public void newButtonUnderAccountsTab(){
