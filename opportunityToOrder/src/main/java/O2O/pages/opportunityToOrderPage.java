@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -195,6 +196,9 @@ public class opportunityToOrderPage extends PageObject  {
 	public void convertApprovedOppLinesAsOrder(){
 		clickOnCreateSelectedLineinCCI().click();
 		waitFor(50).seconds();
+		 getDriver().switchTo().frame(getDriver().findElement(By.tagName("iframe")));
+     	 WebElement element = getDriver().switchTo().activeElement();
+     	 waitFor(2).seconds();
 		 addPackage().click();
 		 waitFor(4).seconds();
 		 selectModule().selectByVisibleText("10x2");
