@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import net.thucydides.core.Thucydides;
 import net.thucydides.core.csv.CSVTestDataSource;
@@ -54,28 +56,30 @@ public class opportunityToOrderPage extends PageObject  {
 	private WebElementFacade selectSubSection() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id304:3:j_id305:j_id309")); 	}
 	private WebElementFacade selectZones() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id304:4:j_id305:j_id309")); 	}
 	private WebElementFacade enterInsertionDate()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id320:selectedInsertionDates"));	} //  example date format "19/03/2015"
-	private WebElementFacade enterInsertionPO() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id330:j_id333")); 			}
-	private WebElementFacade selectSize() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id334:j_id336")); 			}
-	private WebElementFacade enterSizeCMs() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id339:j_id342")); 			}
-	private WebElementFacade enterSizeColumns() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id339:j_id344")); 			}
+/*	private WebElementFacade enterInsertionPO() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id330:j_id333")); 			}*/
+	private WebElementFacade selectSize() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id331:j_id333")); 			}
+	private WebElementFacade enterSizeCMs() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id336:j_id347")); 			}
+	private WebElementFacade enterSizeColumns() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id336:j_id349")); 			}
 	
 	/******** Define Elements For MailPlus Package  ********************************************************************************************************************************/
 	
 	private WebElementFacade selectWebsite()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id304:1:j_id305:j_id309")); 	}
 	private WebElementFacade selectAdUnit()			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id304:4:j_id305:j_id309")); 	}
 	private WebElementFacade selectDateflexCB()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id302:0:j_id303:j_id326:j_id329")); 			}
-	private WebElementFacade clickOppLineCancel()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id369")); 										}
-	private WebElementFacade clickOppLineSave()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id374")); 										}
-	private WebElementFacade clickAddtoOppLine()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id377")); 										}
-	private WebElementFacade clickAddtoOppLineandCopy(){ 	return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id380")); 										}
+	private WebElementFacade clickOppLineCancel()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id366")); 										}
+	private WebElementFacade clickOppLineSave()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id371")); 										}
+	private WebElementFacade clickAddtoOppLine()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id374")); 										}
+	private WebElementFacade clickAddtoOppLineandCopy(){ 	return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id215:0:j_id377")); 										}
 	
 	/******** Define Elements of Opportunity Line which will be converted to Order in CCI ***************************************************************************************************/	
 
-	private WebElementFacade selectOppLineToBeConvertedCB()	 { 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id506:0:j_id508")); 										 }
+	private WebElementFacade selectOppLineToBeConvertedCB()	 { 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id508:0:j_id510")); 										 }
 	private WebElementFacade clickOnCreateSelectedLineinCCI(){ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id659")); 												 }
 	private WebElementFacade clickOnEditOppLineImgBtn()		 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id211:singleInsertionPanel']/table/tbody/tr/td[2]/img"));}
 	private WebElementFacade clickOnCancelOppLineImgBtn()	 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id211:singleInsertionPanel']/table/tbody/tr/td[4]/img"));}
-	
+	 private WebElementFacade addPackage()   	 			 { return element(By.xpath("//fieldset/div/div/div/h4/a/span"));									}
+	 private WebElementFacade selectModule()   	 			 { return element(By.id("Order.Schedule.Material:material.moduleCode"));							}
+	 private WebElementFacade acceptOrder()   	 			 { return element(By.xpath("//nav[button='Accept']/button[3]"));									} 
 /***********************************************************************************************************************************************************************************************************************************/
 	
 	public void clickOnOpportunityToOrder(){
@@ -91,8 +95,9 @@ public class opportunityToOrderPage extends PageObject  {
 		if (filePath.isFile()) {
 			String file = filePath.getAbsolutePath();
 			CSVTestDataSource testDataSrc = new CSVTestDataSource(file);
+			try {
 			for (Map<String, String> record : testDataSrc.getData()) {
-				try {
+				
 					waitFor(4).seconds();
 					oppName().type(record.get("oppName"));
 					selectOppStage().selectByVisibleText(record.get("oppStage"));
@@ -102,9 +107,8 @@ public class opportunityToOrderPage extends PageObject  {
 					enterOppEstdVal().type(record.get("oppEstdValue"));	
 					selectOppType().selectByVisibleText(record.get("oppType"));
 					selectOppContactRole().selectByVisibleText(record.get("oppContactRole")); 
-	
-				} catch (Exception e1) {}
 			}
+			} catch (Exception e1) {}
 		}
 	}
 	public void selectContactForOpportunity(String contact){
@@ -129,8 +133,8 @@ public class opportunityToOrderPage extends PageObject  {
 		
 	}
 	public void clickOnNewOpportunityLine(){
-		/*clickOnNewOppLineBtn().click();
-		waitFor(2).seconds();*/
+		clickOnNewOppLineBtn().click();
+		waitFor(3).seconds();
 	}
 	public void createOpportunityLineUsingCSV(String CSVfile) throws Exception {
 		File filePath = new File(CSVfile);
@@ -142,8 +146,8 @@ public class opportunityToOrderPage extends PageObject  {
 				try {
 						/*if (record.get("accType").equalsIgnoreCase("Brand") || record.get("accType").equalsIgnoreCase("Client") || record.get("accType").equalsIgnoreCase("Direct Advertiser")) // 1
 						{ */
-							clickOnNewOppLineBtn().click();
-							waitFor(2).seconds();
+						/*	clickOnNewOppLineBtn().click();
+							waitFor(5).seconds();*/
 					        selectBillingAgent().selectByVisibleText(record.get("billingAgent"));
 							waitFor(4).seconds();
 							selectPackage().selectByVisibleText(record.get("package"));
@@ -170,7 +174,6 @@ public class opportunityToOrderPage extends PageObject  {
 							clickOppLineSave().click();
 							waitFor(15).seconds();
 							Thucydides.takeScreenshot();
-							
 						// }	
 				} catch (Exception e1) {// clickOppLineCancel().click();waitFor(3).seconds(); 
 	        	  						}    
@@ -186,12 +189,23 @@ public class opportunityToOrderPage extends PageObject  {
 		
 	}
 	public void selectOpportunityLinesToConvertAsOrders(){
-/*		selectOppLineToBeConvertedCB().click();
-		waitFor(4).seconds();*/
+		selectOppLineToBeConvertedCB().click();
+		waitFor(4).seconds();
 	}
 	public void convertApprovedOppLinesAsOrder(){
-	/*	clickOnCreateSelectedLineinCCI().click();
-		waitFor(45).seconds();*/
+		clickOnCreateSelectedLineinCCI().click();
+		waitFor(50).seconds();
+		 addPackage().click();
+		 waitFor(4).seconds();
+		 selectModule().selectByVisibleText("10x2");
+		 acceptOrder().click();
+		 waitFor(12).seconds();
+		 try {
+	    	 WebDriverWait wait1 = new WebDriverWait(getDriver(), 3);
+	    	 if(wait1.until(ExpectedConditions.alertIsPresent())!=null)
+	    	      getDriver().switchTo().alert().accept();
+	    	 }
+	    	 catch (Exception x) {}
 	}
 	
 }

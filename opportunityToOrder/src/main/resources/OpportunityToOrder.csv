@@ -1,3 +1,2 @@
-recordNo,accType,oppName,oppStage,oppStartDate,oppEndDate,oppCloseDate,oppType,oppEstdValue,oppContactRole,oppNewBusiness,oppContact,billingAgent,package,title,publication,section,subsection,insertionDate,zones,size,insertionPO,
-1,Brand,Srini Sanity Test,Discussion,01/08/2015,29/12/2015,01/08/2015,Proactive,1000,Client decision maker,Yes,,--Self Billing--,DM Display,Daily Mail,Daily Mail Display,Front Half MD,1st 28 Pages MD,29/08/2015,01. National,10x2,TBC,
-2,Brand,Srini Sanity Test,Discussion,01/08/2015,29/12/2015,01/08/2015,Proactive,1000,Client decision maker,Yes,,--Self Billing--,MailPlus,Not used,MailPlus,Comment - MP,iPAD,29/08/2015,FullTablet,,TBC, 
+recordNo,accType,oppName,oppStage,oppStartDate,oppEndDate,oppCloseDate,oppType,oppEstdValue,oppContactRole,oppNewBusiness,oppContact,billingAgent,package,title,publication,section,subsection,insertionDate,zones,size,insertionPO
+1,Brand,Srini Sanity Test,Discussion,01/08/2015,29/12/2015,01/08/2015,Proactive,1000,Client decision maker,Yes,,--Self Billing--,DM Display,Daily Mail,Daily Mail Display,Front Half MD,1st 28 Pages MD,"28/08/2015,29/08/2015",01. National,10x2,TBC

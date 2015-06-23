@@ -121,7 +121,6 @@ public class accountsHomePage extends PageObject {
 		String str = data1().getText();
 		String test[] = str.split("Number of SOQL queries:");
 		return test[1];
-		
 	}
 	
 	public void accountTabOnHomePage(){
@@ -130,14 +129,13 @@ public class accountsHomePage extends PageObject {
 	}
 	
 	public void openOpportunityPage(){
-		getDriver().get("https://dmgsalescloud--systemtest--c.cs8.visual.force.com/apex/OpportunityToOrder?oppId=006L00000070XH3IAM");
+		getDriver().get("https://dmgsalescloud--systemtest--c.cs8.visual.force.com/apex/OpportunityToOrder?oppID=006L00000075jY6");
 		waitFor(5).seconds();
 	}
 /*	public void newButtonUnderAccountsTab(){
 		newBtn().click();
 		waitFor(5).seconds();
 	}*/
-	
 	
 	public void searchforcustomeraccount(String accountName){
 		searchCustomerAcc().type(accountName);
@@ -187,7 +185,6 @@ public class accountsHomePage extends PageObject {
 
 		saveCustomerRecord().click();
 		waitFor(8).seconds();
-		
 	}
 	
 	public String isCustomerRecrodCreated(){
