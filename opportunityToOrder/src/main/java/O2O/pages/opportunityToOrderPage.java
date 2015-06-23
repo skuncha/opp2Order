@@ -73,7 +73,7 @@ public class opportunityToOrderPage extends PageObject  {
 	
 	/******** Define Elements of Opportunity Line which will be converted to Order in CCI ***************************************************************************************************/	
 
-	private WebElementFacade selectOppLineToBeConvertedCB()	 { 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id508:0:j_id510")); 										 }
+	private WebElementFacade selectOppLineToBeConvertedCB()	 { 		return element(By.xpath("//*[@id='j_id0:opportunityToPrintForm:j_id211:singleInsertionPanel']/table/tbody/tr[1]/td[1]/input")); 										 }
 	private WebElementFacade clickOnCreateSelectedLineinCCI(){ 		return element(By.name("j_id0:opportunityToPrintForm:j_id211:j_id659")); 												 }
 	private WebElementFacade clickOnEditOppLineImgBtn()		 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id211:singleInsertionPanel']/table/tbody/tr/td[2]/img"));}
 	private WebElementFacade clickOnCancelOppLineImgBtn()	 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id211:singleInsertionPanel']/table/tbody/tr/td[4]/img"));}
