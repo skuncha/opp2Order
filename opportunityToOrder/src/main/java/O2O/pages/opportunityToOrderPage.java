@@ -202,6 +202,7 @@ public class opportunityToOrderPage extends PageObject  {
 		 addPackage().click();
 		 waitFor(6).seconds();
 		 selectModule().selectByVisibleText("10x2");
+		 waitFor(6).seconds();
 		 acceptOrder().click();
 		 waitFor(12).seconds();
 		 try {
