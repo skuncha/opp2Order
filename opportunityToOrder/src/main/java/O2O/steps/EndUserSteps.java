@@ -29,6 +29,7 @@ public class EndUserSteps extends ScenarioSteps {
 	public void accesshomepage() {
 
 		salesforceLoginPage.open();
+		waitFor(10).seconds();
 	}
 
 	@Step
