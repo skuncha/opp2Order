@@ -157,13 +157,13 @@ public class opportunityToOrderPage extends PageObject  {
 							waitFor(1).seconds();
 					//		selectTitle().selectByVisibleText(record.get("title"));
 							selectPublication().selectByVisibleText(record.get("publication"));
-							waitFor(10).seconds();
+							waitFor(8).seconds();
 							selectSection().selectByVisibleText(record.get("section"));
-							waitFor(7).seconds();
+							waitFor(6).seconds();
 							selectSubSection().selectByVisibleText(record.get("subsection"));
-							waitFor(7).seconds();
+							waitFor(6).seconds();
 							selectZones().selectByVisibleText(record.get("zones"));
-							waitFor(10).seconds();
+							waitFor(6).seconds();
 							enterInsertionDate().typeAndTab(record.get("insertionDate"));
 							waitFor(1).seconds();
 						/*	selectSize().selectByVisibleText(record.get("size"));
