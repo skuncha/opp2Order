@@ -61,7 +61,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.11</version>
                 <configuration>
-                    <skip>true</skip>
+                    <skip>false</skip>
                 </configuration>
             </plugin>
             <plugin>
@@ -74,6 +74,7 @@
                         <include>**/When*.java</include>
                         <include>**/*TestSuite.java</include>
                     </includes>
+                    <argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=512m</argLine>
                 </configuration>
                 <executions>
                     <execution>
@@ -108,6 +109,7 @@
                     </execution>
                 </executions>
             </plugin>
+            
         </plugins>
     </build>
 
