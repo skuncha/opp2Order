@@ -141,7 +141,7 @@ public class accountsHomePage extends PageObject {
 		searchCustomerAcc().type(accountName);
 		waitFor(1).seconds();
 		searchBtn().click();
-		waitFor(3).seconds();
+		waitFor(5).seconds();
 	}
 	
 	public void clickOnNewBtnToCreateCustomerAccount(){
@@ -279,15 +279,15 @@ public class accountsHomePage extends PageObject {
 		editable.findElement(
 				By.cssSelector("input[name='j_id0:j_id1:j_id27:j_id28:j_id31']"))
 				.click();
-		waitFor(2).seconds();
+		waitFor(3).seconds();
 	}
 
 	public void selectCategories(String mainCategory, String subCategory,
 			String minorCategory) {
 		mainCate().selectByVisibleText(mainCategory);
-		waitFor(3).seconds();
+		waitFor(5).seconds();
 		subCate().selectByVisibleText(subCategory);
-		waitFor(3).seconds();
+		waitFor(5).seconds();
 		minorCate().selectByVisibleText(minorCategory);
 	}
 

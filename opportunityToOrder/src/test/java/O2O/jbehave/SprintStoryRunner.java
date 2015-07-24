@@ -8,7 +8,7 @@ import net.thucydides.jbehave.ThucydidesJUnitStories;
  * @author srinivasa.kuncha
  * @add - extends ThucydidesJUnitStories
  */
-public class SprintStoryRunner {
+public class SprintStoryRunner  {
 	
 	public SprintStoryRunner() {
 		
