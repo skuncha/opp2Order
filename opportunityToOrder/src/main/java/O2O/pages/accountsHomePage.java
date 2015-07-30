@@ -205,7 +205,7 @@ public class accountsHomePage extends PageObject {
 		clickOnNewBtnToCreateCustomerAccount();
 		selectRecrodTypeAndContinue("Agency");
 		waitFor(1).seconds();
-		accountName().type("Booking Agency "+timeNow);
+		accountName().type("Srini Agency "+timeNow);
 		phoneNumber().type("0123456789");
     	billingStreet().type("DMGT Street");
     	billingPostCode().type("W8 5TT");

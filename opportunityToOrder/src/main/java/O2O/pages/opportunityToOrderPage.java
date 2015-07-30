@@ -23,59 +23,59 @@ public class opportunityToOrderPage extends PageObject  {
 	/******** Define Elements of Opportunity Registration Tab *******************************************************************************************************************************************************************/
 	
 	private WebElementFacade clickOnOppToOrderBtn() { 		return element(By.cssSelector("input[value='Opportunity To Order']")); 							}
-	private WebElementFacade oppName() 				{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id62:j_id63:j_id67")); 					}
-	private WebElementFacade selectOppStage() 		{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id62:j_id99:j_id103")); 					}
-	private WebElementFacade enterOppStartDate() 	{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id62:j_id141:j_id145")); 				}
-	private WebElementFacade enterOppEndDate() 		{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id62:j_id153:j_id157")); 				}
-	private WebElementFacade enterOppCloseDate() 	{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id62:j_id106:j_id110")); 				}
-	private WebElementFacade enterOppEstdVal()		{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id62:j_id159:j_id163")); 				}
-	private WebElementFacade selectOppType() 		{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id62:j_id93:j_id97")); 					}
-	private WebElementFacade selectOppContactRole() { 		return element(By.name("j_id0:opportunityForm:j_id61:j_id62:j_id119:j_id123")); 				}
-	private WebElementFacade selectContact1() 		{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id62:j_id112:j_id116"));					}
-	private WebElementFacade selectBillingAgency() 	{ 		return element(By.xpath("//*[@id='j_id0:opportunityForm:j_id61:j_id62:j_id81:agencyFieldPanel']/select/option[2]"));	}
+	private WebElementFacade oppName() 				{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id63:j_id64:j_id68")); 					}
+	private WebElementFacade selectOppStage() 		{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id63:j_id102:j_id106")); 					}
+	private WebElementFacade enterOppStartDate() 	{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id63:j_id144:j_id148")); 				}
+	private WebElementFacade enterOppEndDate() 		{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id63:j_id156:j_id160")); 				}
+	private WebElementFacade enterOppCloseDate() 	{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id63:j_id109:j_id113")); 				}
+	private WebElementFacade enterOppEstdVal()		{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id63:j_id162:j_id166")); 				}
+	private WebElementFacade selectOppType() 		{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id63:j_id96:j_id100")); 					}
+	private WebElementFacade selectOppContactRole() { 		return element(By.name("j_id0:opportunityForm:j_id62:j_id63:j_id123:j_id126")); 				}
+	private WebElementFacade selectContact1() 		{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id63:j_id115:j_id119"));					}
+	private WebElementFacade selectBillingAgency() 	{ 		return element(By.xpath("//*[@id='j_id0:opportunityForm:j_id62:j_id63:j_id83:agencyFieldPanel']/select/option[2]"));	}
 	private WebElementFacade selectBillingAgency1() { 		return element(By.xpath("//*[@id='j_id0:opportunityForm:j_id60:j_id61:j_id79:j_id84:agencyFieldPanel']/select/option[2]"));	}
 	private WebElementFacade selectNewBusinessCB() 	{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id62:j_id141")); 						}
-	private WebElementFacade clickOppSaveBtn() 		{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id233")); 								}
-	/*private WebElementFacade clickOppEditBtn() 	{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id236")); 								}
-	private WebElementFacade clickOppDeleteBtn() 	{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id237")); 								}
-	private WebElementFacade clickOppCloseWon() 	{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id239")); 								}
-	private WebElementFacade clickOppCloseLost() 	{ 		return element(By.name("j_id0:opportunityForm:j_id61:j_id241")); 								}*/
+	private WebElementFacade clickOppSaveBtn() 		{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id236")); 								}
+	/*private WebElementFacade clickOppEditBtn() 	{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id238")); 								}
+	private WebElementFacade clickOppDeleteBtn() 	{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id239")); 								}
+	private WebElementFacade clickOppCloseWon() 	{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id241")); 								}
+	private WebElementFacade clickOppCloseLost() 	{ 		return element(By.name("j_id0:opportunityForm:j_id62:j_id243")); 								}*/
 	
 	/******** Define Elements of OpportunityLine Tab *******************************************************************************************************************************/
-	private WebElementFacade clickOnNewOppLineBtn() { 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id248")); 										}
-	private WebElementFacade selectBillingAgent() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:fieldsSection:j_id292:j_id296")); 		}
-	private WebElementFacade selectPackage() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:fieldsSection:j_id309:j_id312")); 		}
+	private WebElementFacade clickOnNewOppLineBtn() { 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id251")); 										}
+	private WebElementFacade selectBillingAgent() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:fieldsSection:j_id295:j_id299")); 		}
+	private WebElementFacade selectPackage() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:fieldsSection:j_id312:j_id315")); 		}
 	private WebElementFacade selectBillingAgent1() 	{ 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id212:j_id216:0:fieldsSection:j_id260:line_billingAgentFieldPanel']/div/select/option[2]")); }
 	
-	private WebElementFacade enterOrderPO() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:fieldsSection:j_id318:j_id320")); 		}
-	private WebElementFacade enterSalesPrice()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:fieldsSection:j_id321:j_id325")); 		}
-	private WebElementFacade enterYield() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:fieldsSection:j_id326:j_id330")); 		}
+	private WebElementFacade enterOrderPO() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:fieldsSection:j_id321:j_id323")); 		}
+	private WebElementFacade enterSalesPrice()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:fieldsSection:j_id321:j_id323")); 		}
+	private WebElementFacade enterYield() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:fieldsSection:j_id331:j_id335")); 		}
 	
 	/******** Define Elements of DM Display Package  *******************************************************************************************************************************/
 	
-	private WebElementFacade selectTitle() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:j_id331:0:j_id333:j_id334:0:j_id335:j_id339")); 	}
-	private WebElementFacade selectPublication() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:j_id331:0:j_id333:j_id334:1:j_id335:j_id339")); 	}
-	private WebElementFacade selectSection() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:j_id331:0:j_id333:j_id334:2:j_id335:j_id339")); 	}
-	private WebElementFacade selectSubSection() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:j_id331:0:j_id333:j_id334:3:j_id335:j_id339")); 	}
-	private WebElementFacade selectZones() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:j_id331:0:j_id333:j_id334:4:j_id335:j_id339")); 	}
-	private WebElementFacade enterInsertionDate()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:j_id331:0:j_id333:j_id350:selectedInsertionDates"));	} //  example date format "19/03/2015"
-	/*private WebElementFacade selectSize() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id247:j_id251:0:j_id336:0:j_id338:j_id366:j_id368")); 			}
-	private WebElementFacade enterSizeCMs() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id247:j_id251:0:j_id336:0:j_id338:j_id371:j_id373")); 			}
-	private WebElementFacade enterSizeColumns() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id247:j_id251:0:j_id336:0:j_id338:j_id374:j_id376")); 			}*/
+	private WebElementFacade selectTitle() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id336:0:j_id338:j_id339:0:j_id340:j_id344")); 	}
+	private WebElementFacade selectPublication() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id336:0:j_id338:j_id339:1:j_id340:j_id344")); 	}
+	private WebElementFacade selectSection() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id336:0:j_id338:j_id339:2:j_id340:j_id344")); 	}
+	private WebElementFacade selectSubSection() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id336:0:j_id338:j_id339:3:j_id340:j_id344")); 	}
+	private WebElementFacade selectZones() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id336:0:j_id338:j_id339:4:j_id340:j_id344")); 	}
+	private WebElementFacade enterInsertionDate()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id336:0:j_id338:j_id355:selectedInsertionDates"));	} //  example date format "19/03/2015"
+	/*private WebElementFacade selectSize() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id336:0:j_id338:j_id369:j_id371")); 			}
+	private WebElementFacade enterSizeCMs() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id336:0:j_id338:j_id374:j_id376")); 			}
+	private WebElementFacade enterSizeColumns() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id336:0:j_id338:j_id377:j_id379")); 			}*/
 	
 	/******** Define Elements For MailPlus Package  ********************************************************************************************************************************/
 	
-	/*private WebElementFacade selectWebsite()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:j_id331:0:j_id333:j_id334:0:j_id335:j_id339")); 	}
-	private WebElementFacade selectAdUnit()			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:j_id331:0:j_id333:j_id334:4:j_id335:j_id339")); 	}
-	private WebElementFacade selectDateflexCB()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id247:j_id251:0:j_id336:0:j_id338:j_id361:j_id364")); 			}
-	private WebElementFacade clickOppLineCancel()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id245:j_id249:0:j_id391")); 										}
-	private WebElementFacade clickSaveAndNew()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id245:j_id249:0:j_id399")); 										}
-	private WebElementFacade clickSaveAndCopy()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id245:j_id249:0:j_id402")); 											}*/
-	private WebElementFacade clickOppLineSave()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id250:0:j_id393")); 										}
+	/*private WebElementFacade selectWebsite()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id336:0:j_id338:j_id339:0:j_id340:j_id344")); 	}
+	private WebElementFacade selectAdUnit()			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id336:0:j_id338:j_id339:4:j_id340:j_id344")); 	}
+	private WebElementFacade selectDateflexCB()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id336:0:j_id338:j_id361:j_id364")); 			}
+	private WebElementFacade clickOppLineCancel()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id396")); 										}
+	private WebElementFacade clickSaveAndNew()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id404")); 										}
+	private WebElementFacade clickSaveAndCopy()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id407")); 											}*/
+	private WebElementFacade clickOppLineSave()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:j_id401")); 										}
 	/******** Define Elements of Opportunity Line which will be converted to Order in CCI ***************************************************************************************************/	
 
-	 private WebElementFacade selectOppLineToBeConvertedCB()	 { 		return element(By.xpath("//*[@id='j_id0:opportunityToPrintForm:j_id246:singleInsertionPanel']/table/tbody/tr/td[1]/input")); }
-	 private WebElementFacade clickOnCreateSelectedLineinCCI()	 { 		return element(By.name("j_id0:opportunityToPrintForm:j_id246:j_id686")); 												 }
+	 private WebElementFacade selectOppLineToBeConvertedCB()	 { 		return element(By.xpath("//*[@id='j_id0:opportunityToPrintForm:j_id249:singleInsertionPanel']/table/tbody/tr/td[1]/input")); }
+	 private WebElementFacade clickOnCreateSelectedLineinCCI()	 { 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id703")); 												 }
 	 /*private WebElementFacade clickOnEditOppLineImgBtn()		 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id245:singleInsertionPanel']/table/tbody/tr/td[2]/img"));}
 	 private WebElementFacade clickOnCancelOppLineImgBtn()	 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id245:singleInsertionPanel']/table/tbody/tr/td[4]/img"));}*/
 	 private WebElementFacade addPackage()   	 			 { return element(By.xpath("//fieldset/div/div/div/h4/a/span"));									}
@@ -103,7 +103,7 @@ public class opportunityToOrderPage extends PageObject  {
 					oppName().type(record.get("oppName"));
 					waitFor(1).second();
 					selectOppStage().selectByVisibleText(record.get("oppStage"));
-					waitFor(1).second();
+					waitFor(3).second();
 					enterOppStartDate().type(record.get("oppStartDate"));
 					enterOppEndDate().type(record.get("oppEndDate"));	
 					enterOppCloseDate().type(record.get("oppCloseDate")); 
@@ -111,9 +111,9 @@ public class opportunityToOrderPage extends PageObject  {
 					enterOppEstdVal().type(record.get("oppEstdValue"));	
 					waitFor(1).second();
 					selectOppType().selectByVisibleText(record.get("oppType"));
-					waitFor(1).second();
+					waitFor(2).second();
 					selectOppContactRole().selectByVisibleText(record.get("oppContactRole")); 
-					waitFor(1).second();
+					waitFor(2).second();
 			}
 			} catch (Exception e1) {}
 		}
@@ -155,11 +155,13 @@ public class opportunityToOrderPage extends PageObject  {
 						{ */
 						/*	clickOnNewOppLineBtn().click();
 							waitFor(5).seconds();*/
-					        selectBillingAgent().selectByVisibleText(record.get("billingAgent"));
-							waitFor(4).seconds();
+					        /*selectBillingAgent().selectByVisibleText(record.get("billingAgent"));
+							waitFor(4).seconds();*/
 							selectPackage().selectByVisibleText(record.get("package"));
 							waitFor(8).seconds();
 							enterOrderPO().type(record.get("insertionPO"));
+							waitFor(1).seconds();
+							enterSalesPrice().type("1500");
 							waitFor(1).seconds();
 					//		selectTitle().selectByVisibleText(record.get("title"));
 							selectPublication().selectByVisibleText(record.get("publication"));
