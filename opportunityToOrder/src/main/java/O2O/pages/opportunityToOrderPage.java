@@ -48,7 +48,7 @@ public class opportunityToOrderPage extends PageObject  {
 	private WebElementFacade selectBillingAgent1() 	{ 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id212:j_id216:0:fieldsSection:j_id260:line_billingAgentFieldPanel']/div/select/option[2]")); }
 	
 	private WebElementFacade enterOrderPO() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:fieldsSection:j_id321:j_id323")); 		}
-	private WebElementFacade enterSalesPrice()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:fieldsSection:j_id321:j_id323")); 		}
+	private WebElementFacade enterSalesPrice()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:fieldsSection:j_id324:j_id329")); 		}
 	private WebElementFacade enterYield() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id249:j_id253:0:fieldsSection:j_id331:j_id335")); 		}
 	
 	/******** Define Elements of DM Display Package  *******************************************************************************************************************************/
