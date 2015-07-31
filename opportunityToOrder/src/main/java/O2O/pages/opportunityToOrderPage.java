@@ -121,7 +121,13 @@ public class opportunityToOrderPage extends PageObject  {
 	public void selectContactForOpportunity(String contact){
 		
 		/*System.out.println("Contact id is ----------------------------------------------------> "+contact);*/
-		selectContact1().selectByVisibleText(contact);
+		try{
+			selectContact1().selectByVisibleText(contact);
+		} catch (Exception defalutelement) {
+			
+			System.out.println(" Account Type is Private Advertiser ");
+		}
+		
 	}
 	
 	public void selectAgencyToBeBilled(String CustomerAccount){

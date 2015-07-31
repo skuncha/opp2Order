@@ -199,7 +199,6 @@ Examples:
 Scenario: Sales Executive will be able to create opportunityToOrder for a Private Advertiser
 
 Meta:
--skip
 @author Srinivasa Kuncha
 @tags feature: OpportunityToOrder
 

@@ -210,16 +210,16 @@ public class accountsHomePage extends PageObject {
     	billingStreet().type("DMGT Street");
     	billingPostCode().type("W8 5TT");
     	saveCustomerRecord().click();
-    	waitFor(5).seconds();
+    	waitFor(6).seconds();
     	bookingAccountPage = getDriver().getCurrentUrl();
     	createCCICustomerMail();
-    	waitFor(4).seconds();
+    	waitFor(6).seconds();
     	newRelationship().click();
     	waitFor(2).seconds();
     	relationB().type(customerAccountName);
     	relationRole().selectByVisibleText("Booking"); // User should have booking agency association otherwise agency details will not appear while creating opp
     	saveAssocitaion().click();
-    	waitFor(3).seconds(); //2
+    	waitFor(4).seconds(); //2
     	getDriver().get(bookingAccountPage);
     	waitFor(3).seconds();
     	bookingAccountName = readAccountName().getText();
