@@ -67,7 +67,7 @@ When  Sales Executive supply input as required to create customer account:
 |ElementName 	|ElementValue							|
 |accountType	|Brand									|
 |accountName	|Brand parent DA 						|
-|parentaccount	|Srini Test								|
+|parentaccount	|1439546594213 Direct Advertiser		|
 |phoneNumber	|020 000000000							|
 |billingStreet	|DMGT Street							|
 |postCode		|BT60JH									|
@@ -262,7 +262,7 @@ When  Sales Executive supply input as required to create customer account:
 |ElementName 	|ElementValue							|
 |accountType	|Brand									|
 |accountName	|Brand parent Client 					|
-|parentaccount	|1430130968665 RegressionTest			|
+|parentaccount	|1439555782422 Client					|
 |phoneNumber	|020 000000000							|
 |billingStreet	|DMGT Street							|
 |postCode		|BT60JH									|
