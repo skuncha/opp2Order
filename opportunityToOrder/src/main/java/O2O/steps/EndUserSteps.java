@@ -25,18 +25,19 @@ public class EndUserSteps extends ScenarioSteps {
 	ArrayList<String> list = new ArrayList<String>();
 	ArrayList<String> debugList = new ArrayList<String>();
 	public static String AccountName;
+	
 	@Step
 	public void accesshomepage() {
 
 		salesforceLoginPage.open();
-		waitFor(10).seconds();
+		waitFor(8).seconds();
+		getDriver().manage().window().maximize();
+		waitFor(2).seconds();
 	}
-
-	@Step
-	public void supplyCredentialsToLogin(String uid, String passwd) {
+	public void supplyCredentialsToLogin(String username, String password) {
 
 		loginPage sfLoginPage = getPages().get(loginPage.class);
-		sfLoginPage.supplyCredentialsToLogin(uid, passwd);
+		sfLoginPage.supplyCredentialsToLogin(username, password);
 		sfLoginPage.submitLogin();
 	}
 	

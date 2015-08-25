@@ -10,15 +10,19 @@ import net.thucydides.core.pages.WebElementFacade;
 
 public class loginPage extends PageObject {
 
-	private WebElementFacade username() 	{ return element(By.id("username"));	}
-	private WebElementFacade password() 	{ return element(By.id("password"));	}
+	private WebElementFacade userid() 	{ return element(By.cssSelector("#username"));	}
+	private WebElementFacade userpasswd() 	{ return element(By.cssSelector("#password"));	}
 	private WebElementFacade loginbutton()  { return element(By.id("Login"));		}
     
+
 	public void supplyCredentialsToLogin(String userName, String Password){
 		
-		getDriver().manage().window().maximize();
-		username().type(userName);
-		password().type(Password);
+		waitFor(5).seconds();
+		userid().click();
+		System.out.println("User name is "+userName);
+		userid().typeAndTab(userName);
+		userpasswd().type(Password);
+		waitFor(1).seconds();
 		
 	}
 	public void submitLogin(){

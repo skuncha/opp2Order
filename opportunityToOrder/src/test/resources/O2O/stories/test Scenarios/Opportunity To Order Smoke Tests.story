@@ -15,7 +15,6 @@ Meta:
 Given Sales Executive is on the Salesfoce Login Page
 When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
 When  Sales Executive clicks on 'Accounts' Tab on glue Home page
-!-- And   Sales Executive clicks on 'New' button
 And   Sales Executive search for an account on Account Search Screen using [searchAccountName]
 And   Sales Executive clicks on 'NewAccount' button from search results section
 And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continue' button
@@ -93,7 +92,6 @@ And  Sales Executive supplies input data from CSV [file] to create Opportunity L
 Then Sales Executive should be able to create Opportunity Line successfully
 When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
-
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
@@ -107,7 +105,6 @@ Meta:
 Given Sales Executive is on the Salesfoce Login Page
 When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
 When  Sales Executive clicks on 'Accounts' Tab on glue Home page
-!-- And   Sales Executive clicks on 'New' button
 And   Sales Executive search for an account on Account Search Screen using [searchAccountName]
 And   Sales Executive clicks on 'NewAccount' button from search results section
 And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continue' button
@@ -142,7 +139,6 @@ And  Sales Executive supplies input data from CSV [file] to create Opportunity L
 Then Sales Executive should be able to create Opportunity Line successfully
 When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
-
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
@@ -156,7 +152,6 @@ Meta:
 Given Sales Executive is on the Salesfoce Login Page
 When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
 When  Sales Executive clicks on 'Accounts' Tab on glue Home page
-!-- And   Sales Executive clicks on 'New' button
 And   Sales Executive search for an account on Account Search Screen using [searchAccountName]
 And   Sales Executive clicks on 'NewAccount' button from search results section
 And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continue' button
@@ -191,7 +186,6 @@ And  Sales Executive supplies input data from CSV [file] to create Opportunity L
 Then Sales Executive should be able to create Opportunity Line successfully
 When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
-
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
@@ -205,7 +199,6 @@ Meta:
 Given Sales Executive is on the Salesfoce Login Page
 When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
 When  Sales Executive clicks on 'Accounts' Tab on glue Home page
-!-- And   Sales Executive clicks on 'New' button
 And   Sales Executive search for an account on Account Search Screen using [searchAccountName]
 And   Sales Executive clicks on 'NewAccount' button from search results section
 And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continue' button
@@ -239,7 +232,6 @@ And  Sales Executive supplies input data from CSV [file] to create Opportunity L
 Then Sales Executive should be able to create Opportunity Line successfully
 When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
-
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
@@ -254,7 +246,6 @@ Meta:
 Given Sales Executive is on the Salesfoce Login Page
 When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
 When  Sales Executive clicks on 'Accounts' Tab on glue Home page
-!-- And   Sales Executive clicks on 'New' button
 And   Sales Executive search for an account on Account Search Screen using [searchAccountName]
 And   Sales Executive clicks on 'NewAccount' button from search results section
 And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continue' button
@@ -290,7 +281,6 @@ And  Sales Executive supplies input data from CSV [file] to create Opportunity L
 Then Sales Executive should be able to create Opportunity Line successfully
 When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
-
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
@@ -304,7 +294,6 @@ Meta:
 Given Sales Executive is on the Salesfoce Login Page
 When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
 When  Sales Executive clicks on 'Accounts' Tab on glue Home page
-!-- And   Sales Executive clicks on 'New' button
 And   Sales Executive search for an account on Account Search Screen using [searchAccountName]
 And   Sales Executive clicks on 'NewAccount' button from search results section
 And   Sales Executive selects record type as 'Advertiser' and clicks on 'Continue' button
@@ -339,7 +328,6 @@ And  Sales Executive supplies input data from CSV [file] to create Opportunity L
 Then Sales Executive should be able to create Opportunity Line successfully
 When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
-
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|

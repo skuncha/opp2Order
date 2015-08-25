@@ -227,25 +227,29 @@ public class opportunityToOrderPage extends PageObject  {
 		 selectPrice().click();
 		 waitFor(3).seconds();
 		 selectInsertion().click();
-		 waitFor(2).seconds();
+		 waitFor(3).seconds();
 		 selectedInsertionDate().click();
 		 waitFor(3).seconds();
 		 selectBasePrice().click();
-		 waitFor(5).seconds();
+		 waitFor(3).seconds();
 		 supplyPriceType().selectByVisibleText("UserRevenue");
-		 waitFor(2).seconds();
+		 waitFor(1).seconds();
 		 supplyPrice().type("2000");
-		 waitFor(2).seconds();
+		 waitFor(1).seconds();
 		 updateInsLevelRevenue().click();
-		 waitFor(6).seconds();
+		 waitFor(5).seconds();
 		 acceptOrder().click();
-		 waitFor(12).seconds();
+		 waitFor(15).seconds();
+		 Thucydides.takeScreenshot();
+		 getDriver().quit();
 		 try {
 	    	 WebDriverWait wait1 = new WebDriverWait(getDriver(), 3);
 	    	 if(wait1.until(ExpectedConditions.alertIsPresent())!=null)
 	    	      getDriver().switchTo().alert().accept();
 	    	 }
-	    	 catch (Exception x) {}
+	    	 catch (Exception x) {// getDriver().quit();
+	    		 //getDriver().switchTo().alert().accept();
+	    		 }
 	}
 	
 }
