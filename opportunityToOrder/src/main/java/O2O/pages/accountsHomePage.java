@@ -193,13 +193,14 @@ public class accountsHomePage extends PageObject {
 	}
 	
 	public void associateClientWithBookingAgency(){
+		
 		String searchKey = "xyzz";
 		
 		System.out.println(" Customer Account Name is :  " +customerAccountName);
 		clientURL = getDriver().getCurrentUrl();
 		accountsTab().click();
-		/*waitFor(4).seconds();
-		newBtn().click();
+		waitFor(4).seconds();
+		/*newBtn().click();
 		waitFor(3).seconds();*/
 		searchforcustomeraccount(searchKey);
 		clickOnNewBtnToCreateCustomerAccount();

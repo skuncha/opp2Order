@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -30,11 +31,13 @@ public class opportunityToOrderPage extends PageObject  {
 	private WebElementFacade enterOppEndDate() 		{ 		return element(By.name("j_id0:opportunityForm:j_id84:j_id85:j_id178:j_id182")); 				}
 	private WebElementFacade enterOppCloseDate() 	{ 		return element(By.name("j_id0:opportunityForm:j_id84:j_id85:j_id131:j_id135")); 				}
 	private WebElementFacade enterOppEstdVal()		{ 		return element(By.name("j_id0:opportunityForm:j_id84:j_id85:j_id184:j_id188")); 				}
-	private WebElementFacade selectOppType() 		{ 		return element(By.name("j_id0:opportunityForm:j_id84:j_id85:j_id118:j_id122")); 					}
+	private WebElementFacade selectOppType() 		{ 		return element(By.name("j_id0:opportunityForm:j_id84:j_id85:j_id118:j_id122")); 				}
 	private WebElementFacade selectOppContactRole() { 		return element(By.name("j_id0:opportunityForm:j_id84:j_id85:j_id145:j_id148")); 				}
 	private WebElementFacade selectContact1() 		{ 		return element(By.name("j_id0:opportunityForm:j_id84:j_id85:j_id137:j_id141"));					}
+	
+	private WebElementFacade selectAgency() 		{ 		return element(By.xpath("//*[@id='j_id0:opportunityForm:j_id84:j_id85:j_id105:agencyFieldPanel']")); }
 	private WebElementFacade selectBillingAgency() 	{ 		return element(By.xpath("//*[@id='j_id0:opportunityForm:j_id84:j_id85:j_id105:agencyFieldPanel']/select/option[2]"));	}
-	private WebElementFacade selectBillingAgency1() { 		return element(By.xpath("//*[@id='j_id0:opportunityForm:j_id60:j_id61:j_id79:j_id84:agencyFieldPanel']/select/option[2]"));	}
+	private WebElementFacade selectBillingAgency1() { 		return element(By.xpath("//*[@id='j_id0:opportunityForm:j_id84:j_id85:j_id105:agencyFieldPanel']/select/option[2]"));	}
 	private WebElementFacade selectNewBusinessCB() 	{ 		return element(By.name("j_id0:opportunityForm:j_id84:j_id85:j_id165")); 						}
 	private WebElementFacade clickOppSaveBtn() 		{ 		return element(By.name("j_id0:opportunityForm:j_id84:j_id258")); 								}
 	/*private WebElementFacade clickOppEditBtn() 	{ 		return element(By.name("j_id0:opportunityForm:j_id84:j_id260")); 								}
@@ -77,7 +80,7 @@ public class opportunityToOrderPage extends PageObject  {
 	/******** Define Elements of Opportunity Line which will be converted to Order in CCI ***************************************************************************************************************/	
 
 	 private WebElementFacade selectOppLineToBeConvertedCB()	 { 		return element(By.xpath("//*[@id='inprogressTable']/tbody/tr[1]/td[1]/input")); }
-	 private WebElementFacade clickOnCreateSelectedLineinCCI()	 { 		return element(By.name("j_id0:opportunityToPrintForm:j_id282:j_id745")); 												 }
+	 private WebElementFacade clickOnCreateSelectedLineinCCI()	 { 		return element(By.name("j_id0:opportunityToPrintForm:j_id282:j_id751")); 												 }
 	 /*private WebElementFacade clickOnEditOppLineImgBtn()		 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id245:singleInsertionPanel']/table/tbody/tr/td[2]/img"));}
 	 private WebElementFacade clickOnCancelOppLineImgBtn()	 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id245:singleInsertionPanel']/table/tbody/tr/td[4]/img"));}*/
 	 private WebElementFacade addPackage()   	 			 { return element(By.xpath("//fieldset/div/div/div/h4/a/span"));									}
@@ -123,6 +126,8 @@ public class opportunityToOrderPage extends PageObject  {
 					waitFor(2).second();
 					selectOppContactRole().selectByVisibleText(record.get("oppContactRole")); 
 					waitFor(2).second();
+					selectNewBusinessCB().click();
+					waitFor(1).second();
 			}
 			} catch (Exception e1) {}
 		}
@@ -133,10 +138,9 @@ public class opportunityToOrderPage extends PageObject  {
 		try{
 			selectContact1().selectByVisibleText(contact);
 		} catch (Exception defalutelement) {
-			
+
 			System.out.println(" Account Type is Private Advertiser ");
 		}
-		
 	}
 	
 	public void selectAgencyToBeBilled(String CustomerAccount){
@@ -144,7 +148,10 @@ public class opportunityToOrderPage extends PageObject  {
 		if (CustomerAccount.equalsIgnoreCase("Brand") || CustomerAccount.equalsIgnoreCase("Client")){
 			waitFor(2).second();
 			try{
+			selectAgency().click();
+			waitFor(1).second();
 			selectBillingAgency().click();
+//			selectBillingAgency().sendKeys(Keys.RETURN);
 			}catch (Exception nosuchelement) { }
 		}
 	}
@@ -176,7 +183,7 @@ public class opportunityToOrderPage extends PageObject  {
 							waitFor(8).seconds();
 							enterOrderPO().type(record.get("insertionPO"));
 							waitFor(1).seconds();
-							enterSalesPrice().type("1500");
+							enterSalesPrice().type("2000");
 							waitFor(1).seconds();
 					//		selectTitle().selectByVisibleText(record.get("title"));
 							selectPublication().selectByVisibleText(record.get("publication"));
@@ -190,14 +197,9 @@ public class opportunityToOrderPage extends PageObject  {
 							enterInsertionDate().typeAndTab(record.get("insertionDate"));
 							waitFor(1).seconds();
 						/*	selectSize().selectByVisibleText(record.get("size"));
-							waitFor(4).seconds();
-							enterInsertionPO().type(record.get("insertionPO"));
-							waitFor(1).seconds();
-							clickOppLineSave().click(); // 1
-							waitFor(10).seconds();*/
+							waitFor(4).seconds();*/
 							clickOppLineSave().click();
 							waitFor(12).seconds();
-							Thucydides.takeScreenshot();
 						// }	
 				} catch (Exception e1) {// clickOppLineCancel().click();waitFor(3).seconds(); 
 	        	  						}    
