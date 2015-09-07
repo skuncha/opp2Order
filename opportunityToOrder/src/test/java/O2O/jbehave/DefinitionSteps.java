@@ -180,4 +180,27 @@ public class DefinitionSteps {
 	public void clickOnConvertButton(){
 		salesExecutive.convertSelectedOpportunityLines();
 	}
+	
+	@When("Sales Executive clicks on 'Add Digital Products' button to create Digital Lines")
+	public void clickOnNewDigitalLineButton(){
+		salesExecutive.createDigitalLines();
+	}
+	@When(" Sales Executive supplies input to create Digital Lines")
+	public void selectDigitalLines() {
+		salesExecutive.selectDigitalLines();
+	}
+	@Then("Sales Executive should be able to create Digital Lines successfully")
+	public void verifyDigitalLineRecord(){
+		salesExecutive.validateDigitalLineRecord();
+	}
+
+	@Then("Sales Executive should be able to update sales price on the Digital Line")
+	public void updateDigitalLines(){
+		salesExecutive.editExitingDigitalLines();
+	}
+	
+	@Then("Sales Executive should be able to deactivate Digital Line")
+	public void DeactivateDigitalLine(){
+		salesExecutive.cancelDigitalLine();
+	}
 }

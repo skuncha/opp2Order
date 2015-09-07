@@ -9,8 +9,8 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import O2O.pages.accountsHomePage;
 import O2O.pages.loginPage;
+import O2O.pages.opportunityToDigital;
 import O2O.pages.opportunityToOrderPage;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -225,4 +225,39 @@ public class EndUserSteps extends ScenarioSteps {
 		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
 		opp2OrderPage.convertApprovedOppLinesAsOrder();
 	}
+	
+	/**************************************************************************************************************/
+	
+	public void createDigitalLines(){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.chooseDigitalProducts();
+		
+	}
+	public void selectDigitalLines(){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.createDigitalLine();
+	}
+	public void validateDigitalLineRecord(){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		System.out.println("\n");
+		String digitalLine = getDriver().getCurrentUrl();
+		System.out.println(" ********* URL is  :   "+digitalLine);
+	}
+	
+	public void editExitingDigitalLines(){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.editLines();
+	}
+	
+	public void cancelDigitalLine(){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.deactivateLines();
+	}
+	
+	
+	
+	
+	/**************************************************************************************************************/
+	
+	
 }
