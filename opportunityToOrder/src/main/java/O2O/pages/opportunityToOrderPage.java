@@ -96,7 +96,7 @@ public class opportunityToOrderPage extends PageObject  {
 	public void clickOnOpportunityToOrder(){
 		waitFor(3).seconds();
 		clickOnOppToOrderBtn().click();
-		waitFor(2).seconds();
+		waitFor(4).seconds();
 	}
 	
 	public void createOpportunityUsingCSV(String CSVfile) throws Exception {
@@ -114,7 +114,9 @@ public class opportunityToOrderPage extends PageObject  {
 					selectOppStage().selectByVisibleText(record.get("oppStage"));
 					waitFor(2).second();
 					enterOppStartDate().type(record.get("oppStartDate"));
-					enterOppEndDate().type(record.get("oppEndDate"));	
+					waitFor(1).second();
+					enterOppEndDate().type(record.get("oppEndDate"));
+					waitFor(1).second();
 					enterOppCloseDate().type(record.get("oppCloseDate")); 
 					waitFor(1).second();
 					enterOppEstdVal().type(record.get("oppEstdValue"));	
@@ -122,7 +124,7 @@ public class opportunityToOrderPage extends PageObject  {
 					selectOppType().selectByVisibleText(record.get("oppType"));
 					waitFor(2).second();
 					selectOppContactRole().selectByVisibleText(record.get("oppContactRole")); 
-					waitFor(2).second();
+					waitFor(1).second();
 					selectNewBusinessCB().click();
 					waitFor(1).second();
 			}

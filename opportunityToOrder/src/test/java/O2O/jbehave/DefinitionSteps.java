@@ -203,4 +203,9 @@ public class DefinitionSteps {
 	public void DeactivateDigitalLine(){
 		salesExecutive.cancelDigitalLine();
 	}
+	
+	@Then("Sales Executive selects the Digital Line and create new Opportunity using those lines")
+	public void createOppportunityFromSelectDigitalLine(){
+		salesExecutive.createOpppUsingExistingDigitalLine();
+	}
 }

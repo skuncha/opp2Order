@@ -253,6 +253,10 @@ public class EndUserSteps extends ScenarioSteps {
 		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
 		digitalPage.deactivateLines();
 	}
+	public void createOpppUsingExistingDigitalLine(){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.createNewOppFromSelectedLines();
+	}
 	
 	
 	
