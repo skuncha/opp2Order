@@ -47,7 +47,7 @@ public void editLines()
 	waitFor(5).seconds();
 	editDigitalLine().click(); 
 	waitFor(5).seconds();
-	enterSalesPrice().type("100");
+	enterSalesPrice().type("500");
 	waitFor(1).second();
 	saveDigitalLines().click();
 	waitFor(5).seconds();

@@ -8,7 +8,6 @@ I want to login to SalesforceGlue and able to create opportunities, opportunity 
 Scenario: Sales Executive will be able to create opportunityToOrder for a customer type Brand and whose parent is Client 
 
 Meta:
-@skip
 @author Srinivasa Kuncha
 @tags feature: OpportunityToOrder
 
@@ -288,7 +287,6 @@ Examples:
 Scenario: Sales Executive will be able to create opportunityToOrder for a customer type Brand and whose parent is Client 
 
 Meta:
-@skip
 @author Srinivasa Kuncha
 @tags feature: OpportunityToOrder
 

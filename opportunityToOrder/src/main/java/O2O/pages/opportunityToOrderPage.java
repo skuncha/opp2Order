@@ -177,7 +177,7 @@ public class opportunityToOrderPage extends PageObject  {
 					        /*selectBillingAgent().selectByVisibleText(record.get("billingAgent"));
 							waitFor(4).seconds();*/
 							selectPackage().selectByVisibleText(record.get("package"));
-							waitFor(6).seconds();
+							waitFor(5).seconds();
 							enterOrderPO().type(record.get("insertionPO"));
 							waitFor(1).seconds();
 							enterSalesPrice().type("2000");
@@ -186,11 +186,11 @@ public class opportunityToOrderPage extends PageObject  {
 							selectPublication().selectByVisibleText(record.get("publication"));
 							waitFor(5).seconds();
 							selectSection().selectByVisibleText(record.get("section"));
-							waitFor(4).seconds();
+							waitFor(5).seconds();
 							selectSubSection().selectByVisibleText(record.get("subsection"));
-							waitFor(4).seconds();
+							waitFor(5).seconds();
 							selectZones().selectByVisibleText(record.get("zones"));
-							waitFor(4).seconds();
+							waitFor(5).seconds();
 							enterInsertionDate().typeAndTab(record.get("insertionDate"));
 							waitFor(1).seconds();
 							selectDateflexCB().click();	
