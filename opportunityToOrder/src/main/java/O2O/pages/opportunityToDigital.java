@@ -12,7 +12,7 @@ public class opportunityToDigital extends PageObject {
 	public static String lnDesc, oppName;
 	
 	private WebElementFacade clickOnAddDigitalProducts() {return element(By.id("j_id0:opportunityToDigitalForm:j_id868:j_id900")); }
-	private WebElementFacade selectProduct() 		     {return element(By.xpath("//div[@id='j_id0:opportunityToDigitalForm:j_id868:j_id903:j_id904:multiselectPanel']/table/tbody/tr/td/select/option[12]")); }
+	private WebElementFacade selectProduct() 		     {return element(By.xpath("//div[@id='j_id0:opportunityToDigitalForm:j_id868:j_id903:j_id904:multiselectPanel']/table/tbody/tr/td/select/option[13]")); }
 	private WebElementFacade addProduct() 				 {return element(By.xpath("//div[2]/a/img")); 							   }
 	private WebElementFacade clickOnNext() 				 {return element(By.id("j_id0:opportunityToDigitalForm:j_id868:j_id938")); }
 	private WebElementFacade enterSalesPrice() 			 {return element(By.id("j_id0:opportunityToDigitalForm:j_id868:j_id973:0:j_id1004")); }
@@ -24,22 +24,23 @@ public class opportunityToDigital extends PageObject {
 	private WebElementFacade opportunityCopy()  		 {return element(By.xpath("//*[@id='j_id0:sectionHeaderPanel']/div[1]/div/div[1]/h2")); }
 	private WebElementFacade lineDescription() 	 		 {return element(By.id("j_id0:opportunityToDigitalForm:j_id868:j_id973:0:j_id1009")); }
 	private WebElementFacade lineDescFromTable() 	 	 {return element(By.id("j_id0:opportunityToDigitalForm:j_id868:j_id1072:0:j_id1082")); }
+	private WebElementFacade closedWon() 	 	 		 {return element(By.id("j_id0:opportunityForm:j_id85:j_id264"));					 }
 	
 	
-	public void chooseDigitalProducts() {
+	public void AddDigitalProducts() {
 
 		clickOnAddDigitalProducts().click();
 		waitFor(5).seconds();
+	}
+
+	public void createDigitalLine() {
+		
 		selectProduct().click();
 		waitFor(1).second();
 		addProduct().click();
 		waitFor(1).second();
 		clickOnNext().click();
 		waitFor(5).seconds();
-	}
-
-	public void createDigitalLine() {
-		
 		enterSalesPrice().type("100");
 		waitFor(1).second();
 		saveDigitalLines().click();
@@ -75,7 +76,8 @@ public class opportunityToDigital extends PageObject {
 		createNewOppFromSelected().click();
 		waitFor(8).seconds();
 		oppName = opportunityCopy().getText();
-		System.out.println("Copied OppName is   --->  "+oppName);
 		assertThat(oppName,is(equalTo("Srini Sanity Test-Copy")));
+		System.out.println("Copied Opportunity is :     "+getDriver().getCurrentUrl());
 	}
+	
 }

@@ -230,7 +230,7 @@ public class EndUserSteps extends ScenarioSteps {
 	
 	public void createDigitalLines(){
 		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
-		digitalPage.chooseDigitalProducts();
+		digitalPage.AddDigitalProducts();
 		
 	}
 	public void selectDigitalLines(){

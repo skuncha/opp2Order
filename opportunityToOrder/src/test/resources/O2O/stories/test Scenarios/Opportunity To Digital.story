@@ -5,7 +5,7 @@ Scenario: Sales Executive will be able to create Opportunity to Digital line
 
 Meta:
 @author Srinivasa Kuncha
-@tags feature: OpportunityToOrder
+@tags feature: OpportunityToDigital
 
 Given Sales Executive is on the Salesfoce Login Page
 When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
@@ -42,7 +42,7 @@ Scenario: Sales Executive will be able to de-activate Opportunity to Digital lin
 
 Meta:
 @author Srinivasa Kuncha
-@tags feature: OpportunityToOrder
+@tags feature: OpportunityToDigital
 
 Given Sales Executive is on the Salesfoce Login Page
 When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
@@ -80,7 +80,7 @@ Scenario: Sales Executive will be able to edit Opportunity to Digital line
 
 Meta:
 @author Srinivasa Kuncha
-@tags feature: OpportunityToOrder
+@tags feature: OpportunityToDigital
 
 Given Sales Executive is on the Salesfoce Login Page
 When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
@@ -118,7 +118,7 @@ Scenario: Sales Executive will be able to create opportunity from the selected D
 
 Meta:
 @author Srinivasa Kuncha
-@tags feature: OpportunityToOrder
+@tags feature: OpportunityToDigital
 
 Given Sales Executive is on the Salesfoce Login Page
 When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
