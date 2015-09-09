@@ -112,7 +112,7 @@ public class opportunityToOrderPage extends PageObject  {
 					oppName().type(record.get("oppName"));
 					waitFor(1).second();
 					selectOppStage().selectByVisibleText(record.get("oppStage"));
-					waitFor(2).second();
+					waitFor(4).second();
 					enterOppStartDate().type(record.get("oppStartDate"));
 					waitFor(1).second();
 					enterOppEndDate().type(record.get("oppEndDate"));

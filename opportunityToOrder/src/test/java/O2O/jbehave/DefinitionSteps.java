@@ -181,6 +181,11 @@ public class DefinitionSteps {
 		salesExecutive.convertSelectedOpportunityLines();
 	}
 	
+	@When("Sales Executive clicks on 'New Account Mapping' link and creates accoutMapping")
+	public void newAccountMappingWithSourceSystemInformation(){
+		salesExecutive.createAccountMapping();
+	}
+	
 	@When("Sales Executive clicks on 'Add Digital Products' button to create Digital Lines")
 	public void clickOnNewDigitalLineButton(){
 		salesExecutive.createDigitalLines();
@@ -207,5 +212,26 @@ public class DefinitionSteps {
 	@Then("Sales Executive selects the Digital Line and create new Opportunity using those lines")
 	public void createOppportunityFromSelectDigitalLine(){
 		salesExecutive.createOpppUsingExistingDigitalLine();
+	}
+	
+	@When("Sales Executive should be able to changes opportunity stage as Close Won and save")
+	public void changeOppStageAsClosedWon(){
+		salesExecutive.changeOppStage();
+	}
+	@Then("Sales Executive should see opportunity stage changed to Closed Won successfully")
+	public void oppStageShouldChangedToClosedWon(){
+		salesExecutive.oppStageShouldBeChanged();
+	}
+	@When("Sales Executive should be able to changes opportunity stage as Close Lost and save")
+	public void changeOppStageAsClosedLost(){
+		salesExecutive.changeOppStageToClosedLost();
+	}
+	@Then("Sales Executive should see opportunity stage changed to Closed Lost successfully")
+	public void oppStageShouldChangedToClosedLost(){
+		salesExecutive.oppStageShouldBeChangedAsClosedLost();
+	}
+	@Then("Sales Executive should be shown error message as $error when try to add new digital line")
+	public void errorMessage(String error){
+		salesExecutive.errorMessageAsExpected(error);
 	}
 }

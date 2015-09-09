@@ -228,9 +228,14 @@ public class EndUserSteps extends ScenarioSteps {
 	
 	/**************************************************************************************************************/
 	
+	public void createAccountMapping(){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.mapAccountWithSourceSystem();
+		
+	}
 	public void createDigitalLines(){
 		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
-		digitalPage.AddDigitalProducts();
+		digitalPage.addDigitalProducts();
 		
 	}
 	public void selectDigitalLines(){
@@ -258,8 +263,27 @@ public class EndUserSteps extends ScenarioSteps {
 		digitalPage.createNewOppFromSelectedLines();
 	}
 	
+	public void changeOppStage(){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.oppStageAsClosedWon();
+	}
+	public void oppStageShouldBeChanged(){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.OppStageShouldBeChanged();
+	}
+	public void changeOppStageToClosedLost(){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.oppStageAsClosedLost();
+	}
+	public void oppStageShouldBeChangedAsClosedLost(){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.OppStageShouldBeClosedLost();
+	}
 	
-	
+	public void errorMessageAsExpected(String errorMessage){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.errorMessageWhenOppIsClosed(errorMessage);
+	}
 	
 	/**************************************************************************************************************/
 	
