@@ -198,8 +198,6 @@ public class opportunityToOrderPage extends PageObject  {
 							waitFor(5).seconds();
 							enterInsertionDate().typeAndTab(record.get("insertionDate"));
 							waitFor(1).seconds();
-							selectDateflexCB().click();	
-							waitFor(3).seconds();
 						/*	selectSize().selectByVisibleText(record.get("size"));
 							waitFor(4).seconds();*/
 							clickOppLineSave().click();
