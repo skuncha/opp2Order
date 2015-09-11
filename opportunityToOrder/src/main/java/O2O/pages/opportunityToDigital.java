@@ -94,6 +94,7 @@ public class opportunityToDigital extends PageObject {
 		selectDigitalLine().click();
 		waitFor(5).seconds();
 		deactivateDigitalLine().click();
+		waitFor(3).seconds();
 		deactivateReason().selectByVisibleText("Created in error");
 		deactivateReasonSave().click();
 		waitFor(3).seconds();

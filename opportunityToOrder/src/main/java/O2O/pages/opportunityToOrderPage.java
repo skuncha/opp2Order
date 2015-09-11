@@ -127,6 +127,9 @@ public class opportunityToOrderPage extends PageObject  {
 					selectOppContactRole().selectByVisibleText(record.get("oppContactRole")); 
 					waitFor(1).second();
 					selectNewBusinessCB().click();
+					waitFor(1).second();
+/*					selectDateflexCB().click();
+					waitFor(2).second();*/
 					try { selectPartnership().selectByVisibleText("No"); 
 					} catch (Exception noElement) {System.out.println("*** Mail Display users no need to fill Partnership field *** "); }
 					waitFor(1).second();
