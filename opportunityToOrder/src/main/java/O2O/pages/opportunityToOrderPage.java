@@ -252,7 +252,7 @@ public class opportunityToOrderPage extends PageObject  {
 		 waitFor(1).seconds();
 		 updateInsLevelRevenue().click();
 		 waitFor(5).seconds();
-		 System.out.println("Order id is --------------------->   "+orderID().getText());
+		 /*System.out.println("Order id is --------------------->   "+orderID().getText());*/
 		 acceptOrder().click();
 		 waitFor(15).seconds();
 		 Thucydides.takeScreenshot();
