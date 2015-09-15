@@ -65,7 +65,7 @@ public class EndUserSteps extends ScenarioSteps {
 		accountsHomePage homePage =getPages().get(accountsHomePage.class);
 		homePage.accountTabOnHomePage();
 		/*assertThat(getDriver().getTitle(),is(equalTo("Accounts: Home ~ salesforce.com - Unlimited Edition")));*/
-		assertThat(getDriver().getTitle(),is(equalTo("salesforce.com - Unlimited Edition")));
+		assertThat(getDriver().getTitle(),is(equalTo("Salesforce - Unlimited Edition")));
 	}
 	
 	public void accessOpportunityPage(){
@@ -87,7 +87,7 @@ public class EndUserSteps extends ScenarioSteps {
 	public void clickOnNewBtnUnderSerachResults(){
 		accountsHomePage customerAccountSearch =getPages().get(accountsHomePage.class);
 		customerAccountSearch.clickOnNewBtnToCreateCustomerAccount();
-		assertThat(getDriver().getTitle(),is(equalTo("New Account: Select Account Record Type ~ salesforce.com - Unlimited Edition")));
+		assertThat(getDriver().getTitle(),is(equalTo("New Account: Select Account Record Type ~ Salesforce - Unlimited Edition")));
 	}
 	
 	public void selectRecrodType(String recordType){
@@ -181,7 +181,7 @@ public class EndUserSteps extends ScenarioSteps {
 	public void clickOnOpportunityToOrder(){
 		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
 		opp2OrderPage.clickOnOpportunityToOrder();
-		assertThat(getDriver().getTitle(),is(equalTo("Opportunity To Order ~ salesforce.com - Unlimited Edition")));
+		assertThat(getDriver().getTitle(),is(equalTo("Opportunity To Order ~ Salesforce - Unlimited Edition")));
 	}
 	
 	public void supplyInputForNewOpportunity(String file) throws Exception{

@@ -300,12 +300,17 @@ public class accountsHomePage extends PageObject {
 	}
 
 	public void createCCICustomerMail() {
-		waitFor(1).seconds();
-		CCICustomerMail().click();
-		waitFor(2).seconds();
-		getDriver().switchTo().alert().accept();
-		waitFor(20).seconds();
-		getDriver().switchTo().alert().accept();
+		try {
+			waitFor(1).seconds();
+			CCICustomerMail().click();
+			waitFor(4).seconds();
+			getDriver().switchTo().alert().accept();
+			waitFor(14).seconds();
+			getDriver().switchTo().alert().accept();
+		} catch (Exception syncfailed) {
+			syncfailed.getStackTrace();
+			getDriver().close();
+		}
 	}
 	public boolean isAccountMappingSuccessful() {
 	    try {

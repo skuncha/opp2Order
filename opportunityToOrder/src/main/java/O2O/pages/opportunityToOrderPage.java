@@ -92,6 +92,7 @@ public class opportunityToOrderPage extends PageObject  {
 	 private WebElementFacade supplyPrice()					 { return element(By.xpath("//tbody/tr[23]/td[3]/div/input"));										}
 	 private WebElementFacade updateInsLevelRevenue() 		 { return element(By.xpath("//tbody/tr[23]/td[3]/div/span/button/i"));							    }
 	 private WebElementFacade acceptOrder()   	 			 { return element(By.xpath("//nav[button='Accept']/button[3]"));									} 
+	 private WebElementFacade orderID()      	 			 { return element(By.xpath(".//*[@id='SchedulingAccordion']/div/div[1]/div[2]/div/div[2]/fieldset/div[1]/div/p")); }
 /***************************************************************************************************************************************************************************************************************/
 	
 	public void clickOnOpportunityToOrder(){
@@ -251,6 +252,7 @@ public class opportunityToOrderPage extends PageObject  {
 		 waitFor(1).seconds();
 		 updateInsLevelRevenue().click();
 		 waitFor(5).seconds();
+		 System.out.println("Order id is --------------------->   "+orderID().getText());
 		 acceptOrder().click();
 		 waitFor(15).seconds();
 		 Thucydides.takeScreenshot();
