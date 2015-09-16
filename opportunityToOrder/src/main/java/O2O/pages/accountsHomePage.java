@@ -68,9 +68,9 @@ public class accountsHomePage extends PageObject {
 	private WebElementFacade SOPid() 		 	 {  return element(By.xpath("//*[@id='ep']/div[2]/div[2]/table/tbody/tr[6]/td[4]"));}
 	private WebElementFacade CCIid() 		 	 {  return element(By.xpath("//*[@id='ep']/div[2]/div[2]/table/tbody/tr[5]/td[4]"));}
 	
-	@FindBy(css="//a[@id='001M000000jV6Vk_00ND0000005jggc_link']/span") 
+	@FindBy(partialLinkText="AM-") 
 	WebElement accountMapping;
-	@FindBy(css="//a[@id='001M000000jV6RG_00ND0000005WVcN_link']/span") 
+	@FindBy(partialLinkText="- Mail") 
 	WebElement financeAccountMapping;
 	
 	private WebElementFacade setupLink()  		{ 	return element(By.id("setupLink")); 								}
