@@ -303,10 +303,11 @@ public class accountsHomePage extends PageObject {
 		try {
 			waitFor(1).seconds();
 			CCICustomerMail().click();
-			waitFor(6).seconds();
+			waitFor(4).seconds();
 			getDriver().switchTo().alert().accept();
-			waitFor(15).seconds();
+			waitFor(12).seconds();
 			getDriver().switchTo().alert().accept();
+			waitFor(5).seconds();
 		} catch (Exception syncfailed) {
 			syncfailed.getCause();
 		}
