@@ -303,13 +303,12 @@ public class accountsHomePage extends PageObject {
 		try {
 			waitFor(1).seconds();
 			CCICustomerMail().click();
-			waitFor(4).seconds();
+			waitFor(6).seconds();
 			getDriver().switchTo().alert().accept();
-			waitFor(14).seconds();
+			waitFor(15).seconds();
 			getDriver().switchTo().alert().accept();
 		} catch (Exception syncfailed) {
-			syncfailed.getStackTrace();
-			getDriver().close();
+			syncfailed.getCause();
 		}
 	}
 	public boolean isAccountMappingSuccessful() {
@@ -319,7 +318,7 @@ public class accountsHomePage extends PageObject {
 	        WebElement icon = wait
 	                .until(new Function<WebElement, WebElement>() {
 	                    public WebElement apply(WebElement d) {
-	                        return d.findElement(By.cssSelector("//a[@id='001M000000jV6Vk_00ND0000005jggc_link']/span/span"));
+	                        return d.findElement(By.partialLinkText("AM-"));
 	                    }
 	                });
 	        return false;
@@ -348,7 +347,7 @@ public class accountsHomePage extends PageObject {
 	        WebElement icon = wait
 	                .until(new Function<WebElement, WebElement>() {
 	                    public WebElement apply(WebElement d) {
-	                        return d.findElement(By.cssSelector("//a[@id='001M000000jV6RG_00ND0000005WVcN_link']/span/span"));
+	                        return d.findElement(By.partialLinkText("- Mail"));
 	                    }
 	                });
 	        return false;
