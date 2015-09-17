@@ -214,7 +214,7 @@ public class accountsHomePage extends PageObject {
     	waitFor(6).seconds();
     	bookingAccountPage = getDriver().getCurrentUrl();
     	createCCICustomerMail();
-    	waitFor(6).seconds();
+    	waitFor(1).seconds();
     	newRelationship().click();
     	waitFor(2).seconds();
     	relationB().type(customerAccountName);
@@ -286,9 +286,9 @@ public class accountsHomePage extends PageObject {
 	public void selectCategories(String mainCategory, String subCategory,
 			String minorCategory) {
 		mainCate().selectByVisibleText(mainCategory);
-		waitFor(5).seconds();
+		waitFor(4).seconds();
 		subCate().selectByVisibleText(subCategory);
-		waitFor(5).seconds();
+		waitFor(4).seconds();
 		minorCate().selectByVisibleText(minorCategory);
 	}
 
@@ -303,9 +303,9 @@ public class accountsHomePage extends PageObject {
 		try {
 			waitFor(1).seconds();
 			CCICustomerMail().click();
-			waitFor(6).seconds();
+			waitFor(5).seconds();
 			getDriver().switchTo().alert().accept();
-			waitFor(18).seconds();
+			waitFor(15).seconds();
 			getDriver().switchTo().alert().accept();
 			waitFor(5).seconds();
 		} catch (Exception syncfailed) {

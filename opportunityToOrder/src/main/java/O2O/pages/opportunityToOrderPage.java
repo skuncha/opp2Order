@@ -116,13 +116,9 @@ public class opportunityToOrderPage extends PageObject  {
 					selectOppStage().selectByVisibleText(record.get("oppStage"));
 					waitFor(4).second();
 					enterOppStartDate().type(record.get("oppStartDate"));
-					waitFor(1).second();
 					enterOppEndDate().type(record.get("oppEndDate"));
-					waitFor(1).second();
 					enterOppCloseDate().type(record.get("oppCloseDate")); 
-					waitFor(1).second();
 					enterOppEstdVal().type(record.get("oppEstdValue"));	
-					waitFor(1).second();
 					selectOppType().selectByVisibleText(record.get("oppType"));
 					waitFor(2).second();
 					selectOppContactRole().selectByVisibleText(record.get("oppContactRole")); 
@@ -164,7 +160,7 @@ public class opportunityToOrderPage extends PageObject  {
 	public void validateOppotunityRecord(){
 		waitFor(1).second();
 		clickOppSaveBtn().click();
-		waitFor(15).seconds();
+		waitFor(11).seconds();
 		
 	}
 	public void clickOnNewOpportunityLine(){
@@ -188,7 +184,6 @@ public class opportunityToOrderPage extends PageObject  {
 							selectPackage().selectByVisibleText(record.get("package"));
 							waitFor(5).seconds();
 							enterOrderPO().type(record.get("insertionPO"));
-							waitFor(1).seconds();
 							enterSalesPrice().type("2000");
 							waitFor(1).seconds();
 					//		selectTitle().selectByVisibleText(record.get("title"));
@@ -222,7 +217,7 @@ public class opportunityToOrderPage extends PageObject  {
 	}
 	public void selectOpportunityLinesToConvertAsOrders(){
 		selectOppLineToBeConvertedCB().click();
-		waitFor(6).seconds();
+		waitFor(4).seconds();
 	}
 	public void convertApprovedOppLinesAsOrder(){
 		 clickOnCreateSelectedLineinCCI().click();

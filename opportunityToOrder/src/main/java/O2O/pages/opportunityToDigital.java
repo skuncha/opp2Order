@@ -124,11 +124,11 @@ public class opportunityToDigital extends PageObject {
 	
 	public void oppStageAsClosedLost(){
 		closedLost().click();
-		waitFor(3).seconds();
+		waitFor(5).seconds();
 		closedLostreason().selectByVisibleText("Entered in Error");
 		waitFor(1).seconds();
 		closedLostSave().click();
-		waitFor(5).seconds();
+		waitFor(4).seconds();
 	}
 	public void OppStageShouldBeClosedLost(){
 		String str = oppStage().getText();
