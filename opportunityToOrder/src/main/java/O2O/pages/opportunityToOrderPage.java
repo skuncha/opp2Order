@@ -243,7 +243,7 @@ public class opportunityToOrderPage extends PageObject  {
 		 waitFor(3).seconds();
 		 supplyPriceType().selectByVisibleText("UserRevenue");
 		 waitFor(1).seconds();
-		 supplyPrice().type("2000");
+		 supplyPrice().type("10");
 		 waitFor(1).seconds();
 		 updateInsLevelRevenue().click();
 		 waitFor(5).seconds();

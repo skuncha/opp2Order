@@ -303,7 +303,7 @@ public class accountsHomePage extends PageObject {
 		try {
 			waitFor(1).seconds();
 			CCICustomerMail().click();
-			waitFor(5).seconds();
+			waitFor(7).seconds();
 			getDriver().switchTo().alert().accept();
 			waitFor(15).seconds();
 			getDriver().switchTo().alert().accept();
