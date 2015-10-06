@@ -11,36 +11,37 @@ public class opportunityToDigital extends PageObject {
 	
 	public static String lnDesc, oppName;
 	long timeNow = System.currentTimeMillis();
+
 	
-	private WebElementFacade accountMapping() 			 {	return element(By.xpath("//div[15]/div/div/div/table/tbody/tr/td[2]/input")); 			}
+	private WebElementFacade accountMapping() 			 {	return element(By.xpath("//div[14]/div/div/div/table/tbody/tr/td[2]/input")); 			}
 	private WebElementFacade sourceSystem() 			 {	return element(By.id("00ND0000005WVcR")); 												}
 	private WebElementFacade customerRef() 			 	 {	return element(By.id("00ND0000005WVcQ")); 												}
 	private WebElementFacade accountMappingSave() 		 {	return element(By.xpath("//*[@id='bottomButtonRow']/input[1]")); 						}
-	private WebElementFacade clickOnAddDigitalProducts() {	return element(By.id("j_id0:opportunityToDigitalForm:j_id880:j_id912"));   				}
-	private WebElementFacade selectProduct() 		     {	return element(By.xpath("//div[@id='j_id0:opportunityToDigitalForm:j_id880:j_id915:j_id916:multiselectPanel']/table/tbody/tr/td/select/option[13]")); }
+	private WebElementFacade clickOnAddDigitalProducts() {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id934"));   				}
+	private WebElementFacade selectProduct() 		     {	return element(By.xpath("//div[@id='j_id0:opportunityToDigitalForm:j_id902:j_id937:j_id938:multiselectPanel']/table/tbody/tr/td/select/option[13]")); }
 	private WebElementFacade addProduct() 				 {	return element(By.xpath("//div[2]/a/img")); 							   				}
-	private WebElementFacade clickOnNext() 				 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id880:j_id950"));   				}
-	private WebElementFacade enterSalesPrice() 			 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id880:j_id985:0:j_id1014")); 	}
-	private WebElementFacade saveDigitalLines() 		 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id880:j_id1035")); 				}
+	private WebElementFacade clickOnNext() 				 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id972"));   				}
+	private WebElementFacade enterSalesPrice() 			 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1007:0:j_id1036")); 	}
+	private WebElementFacade saveDigitalLines() 		 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1057")); 				}
 	private WebElementFacade selectDigitalLine() 		 {	return element(By.xpath("//span[3]/table/tbody/tr/td/input")); 							}
-	private WebElementFacade editDigitalLine() 		 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id880:j_id1111")); 				}
-	private WebElementFacade deactivateDigitalLine() 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id880:j_id1112")); 				}
-	private WebElementFacade deactivateReason() 	 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id880:j_id1069:j_id1070")); 		}
-	private WebElementFacade deactivateReasonSave() 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id880:j_id1074")); 				}
-	private WebElementFacade refreshTable() 			 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id880:j_id1077")); 				}
-	private WebElementFacade createNewOppFromSelected()  {	return element(By.name("j_id0:opportunityToDigitalForm:j_id880:j_id1113")); 			}
+	private WebElementFacade editDigitalLine() 		 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1133")); 				}
+	private WebElementFacade deactivateDigitalLine() 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1134")); 				}
+	private WebElementFacade deactivateReason() 	 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1091:j_id1092")); 		}
+	private WebElementFacade deactivateReasonSave() 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1096")); 				}
+	private WebElementFacade refreshTable() 			 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1099")); 				}
+	private WebElementFacade createNewOppFromSelected()  {	return element(By.name("j_id0:opportunityToDigitalForm:j_id902:j_id1135")); 			}
 	private WebElementFacade opportunityCopy()  		 {	return element(By.xpath("//*[@id='j_id0:sectionHeaderPanel']/div[1]/div/div[1]/h2")); 	}
-	private WebElementFacade lineDescription() 	 		 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id880:j_id985:0:j_id1019")); 	}
-	private WebElementFacade lineDescFromTable() 	 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id880:j_id1082:0:j_id1092")); 	}
-	private WebElementFacade closedWon() 	 	 		 {	return element(By.id("j_id0:opportunityForm:j_id85:j_id272"));					 		}
-	private WebElementFacade oppStage() 			 	 {  return element(By.id("j_id0:opportunityForm:j_id85:j_id213:j_id224"));					}
-	private WebElementFacade closedLost() 	 	 		 {	return element(By.id("j_id0:opportunityForm:j_id85:j_id274"));					 		}
-	private WebElementFacade closedLostreason() 		 {  return element(By.id("j_id0:opportunityForm:j_id85:j_id208:j_id209"));					}
-	private WebElementFacade closedLostSave() 			 {  return element(By.id("j_id0:opportunityForm:j_id85:j_id275"));							}
-	private WebElementFacade oppClosedError() 			 {	return element(By.xpath("//*[@id='j_id0:opportunityToDigitalForm:j_id880:j_id881']/div[2]/table/tbody/tr/td[2]/span")); }
+	private WebElementFacade lineDescription() 	 		 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1007:0:j_id1041")); 	}
+	private WebElementFacade lineDescFromTable() 	 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1104:0:j_id1114")); 	}
+	private WebElementFacade closedWon() 	 	 		 {	return element(By.id("j_id0:opportunityForm:j_id85:j_id294"));					 		}
+	private WebElementFacade oppStage() 			 	 {  return element(By.id("j_id0:opportunityForm:j_id85:j_id226:j_id243"));					}
+	private WebElementFacade closedLost() 	 	 		 {	return element(By.id("j_id0:opportunityForm:j_id85:j_id296"));					 		}
+	private WebElementFacade closedLostreason() 		 {  return element(By.id("j_id0:opportunityForm:j_id85:j_id221:j_id222"));					}
+	private WebElementFacade closedLostSave() 			 {  return element(By.id("j_id0:opportunityForm:j_id85:j_id297"));							}
+	private WebElementFacade oppClosedError() 			 {	return element(By.xpath("//*[@id='j_id0:opportunityToDigitalForm:j_id902:j_id903']/div[2]/table/tbody/tr/td[2]/span")); }
 	
 	
-	public void mapAccountWithSourceSystem() {
+	public void mapAccountWithSourceSystem() {                                                                                                 
 		
 		String customDetailsPage = getDriver().getCurrentUrl(); 
 		accountMapping().click();
@@ -97,7 +98,7 @@ public class opportunityToDigital extends PageObject {
 		waitFor(5).seconds();
 		deactivateReason().selectByVisibleText("Created in error");
 		deactivateReasonSave().click();
-		waitFor(3).seconds();
+		waitFor(5).seconds();
 		refreshTable().click();
 		waitFor(3).seconds();
 	}
