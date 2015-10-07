@@ -63,24 +63,24 @@ public class opportunityToOrderPage extends PageObject  {
 	private WebElementFacade selectSubSection() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id317:0:j_id409:0:j_id411:j_id412:3:j_id413:j_id417")); 	}
 	private WebElementFacade selectZones() 			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id317:0:j_id409:0:j_id411:j_id412:4:j_id413:j_id417")); 	}
 	private WebElementFacade enterInsertionDate()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id317:0:j_id409:0:j_id411:j_id428:selectedInsertionDates"));	} //  example date format "19/03/2015"
-	/*private WebElementFacade selectSize() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id317:0:j_id409:0:j_id411:j_id443:j_id445")); 			}
-	private WebElementFacade enterSizeCMs() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id317:0:j_id409:0:j_id411:j_id449:j_id451")); 			}
+	private WebElementFacade selectSize() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id317:0:j_id409:0:j_id411:j_id443:j_id445")); 			}
+	/*private WebElementFacade enterSizeCMs() 		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id317:0:j_id409:0:j_id411:j_id449:j_id451")); 			}
 	private WebElementFacade enterSizeColumns() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id317:0:j_id409:0:j_id411:j_id452:j_id454")); 			}*/
 	
 	/******** Define Elements For MailPlus Package  ******************************************************************************************************************************************************/
 	private WebElementFacade selectDateflexCB()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id317:0:j_id409:0:j_id411:j_id434:j_id437")); 			}
-	/*private WebElementFacade selectWebsite()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id283:j_id287:0:j_id377:0:j_id379:j_id380:0:j_id381:j_id385")); 	}
+	private WebElementFacade selectWebsite()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id283:j_id287:0:j_id377:0:j_id379:j_id380:0:j_id381:j_id385")); 	}
 	private WebElementFacade selectAdUnit()			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id283:j_id287:0:j_id377:0:j_id379:j_id380:4:j_id381:j_id385")); 	}
-	
 	private WebElementFacade clickOppLineCancel()	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id283:j_id287:0:j_id439")); 										}
 	private WebElementFacade clickSaveAndNew()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id283:j_id287:0:j_id447")); 										}
-	private WebElementFacade clickSaveAndCopy()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id283:j_id287:0:j_id450")); 											}*/
+	private WebElementFacade clickSaveAndCopy()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id283:j_id287:0:j_id450")); 										}
 	private WebElementFacade clickOppLineSave()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id317:0:j_id476")); 										}
+	private WebElementFacade clickEditOppLine()		{ 		return element(By.xpath("//tr[2]/td[2]/img")); 											}
 	private WebElementFacade acceptAlert()			{ 		return element(By.name("j_id0:popUpFrame2:j_id45")); }
 	/******** Define Elements of Opportunity Line which will be converted to Order in CCI ***************************************************************************************************************/	
 
-	 private WebElementFacade selectOppLineToBeConvertedCB()	 { 		return element(By.xpath("//*[@id='inprogressTable']/tbody/tr[1]/td[1]/input")); }
-	 private WebElementFacade clickOnCreateSelectedLineinCCI()	 { 		return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id787")); 												 }
+	 private WebElementFacade selectOppLineToBeConvertedCB()	 { 		return element(By.xpath("//*[@id='inprogressTable']/tbody/tr[1]/td[1]/input")); 		}
+	 private WebElementFacade clickOnCreateSelectedLineinCCI()	 { 		return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id787")); 			    }
 	 /*private WebElementFacade clickOnEditOppLineImgBtn()		 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id245:singleInsertionPanel']/table/tbody/tr/td[2]/img"));}
 	 private WebElementFacade clickOnCancelOppLineImgBtn()	 { 		return element(By.name("//*[@id='j_id0:opportunityToPrintForm:j_id245:singleInsertionPanel']/table/tbody/tr/td[4]/img"));}*/
 	 private WebElementFacade addPackage()   	 			 { return element(By.xpath("//fieldset/div/div/div/h4/a/span"));									}
@@ -93,7 +93,9 @@ public class opportunityToOrderPage extends PageObject  {
 	 private WebElementFacade supplyPrice()					 { return element(By.xpath("//tbody/tr[23]/td[3]/div/input"));										}
 	 private WebElementFacade updateInsLevelRevenue() 		 { return element(By.xpath("//tbody/tr[23]/td[3]/div/span/button/i"));							    }
 	 private WebElementFacade acceptOrder()   	 			 { return element(By.xpath("//nav[button='Accept']/button[3]"));									} 
-	 private WebElementFacade orderID()      	 			 { return element(By.xpath(".//*[@id='SchedulingAccordion']/div/div[1]/div[2]/div/div[2]/fieldset/div[1]/div/p")); }
+	 private WebElementFacade orderID()      	 			 { return element(By.xpath("//fieldset/div[1]/div/p")); 											}
+	 private WebElementFacade clickOnRefreshTable()			 { return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id592")); 			    		}
+	 
 /***************************************************************************************************************************************************************************************************************/
 	
 	public void clickOnOpportunityToOrder(){
@@ -122,15 +124,15 @@ public class opportunityToOrderPage extends PageObject  {
 					enterOppEstdVal().type(record.get("oppEstdValue"));	
 					selectOppType().selectByVisibleText(record.get("oppType"));
 					waitFor(2).second();
-					selectOppContactRole().selectByVisibleText(record.get("oppContactRole")); 
+					selectPrintPartnership().selectByVisibleText("No"); 
+					waitFor(1).second();
+					try{selectPartnership().selectByVisibleText("No"); 
+						  waitFor(1).second();
+						}catch (Exception digital) {}
+					/*selectOppContactRole().selectByVisibleText(record.get("oppContactRole")); 
 					waitFor(1).second();
 					selectNewBusinessCB().click();
-					waitFor(1).second();
-					try { selectPartnership().selectByVisibleText("No"); 
-					} catch (Exception noElement) 
-						{ selectPrintPartnership().selectByVisibleText("No"); 
-						  waitFor(1).second();
-						}
+					waitFor(2).second();*/
 			}
 			} catch (Exception e1) {}
 		}
@@ -200,20 +202,29 @@ public class opportunityToOrderPage extends PageObject  {
 							selectDateflexCB().click();
 							waitFor(2).second();
 							}
-						/*	selectSize().selectByVisibleText(record.get("size"));
-							waitFor(4).seconds();*/
 							clickOppLineSave().click();
-							waitFor(12).seconds();
+							waitFor(15).seconds();
 						// }	
 				} catch (Exception e1) {// clickOppLineCancel().click();waitFor(3).seconds(); 
 	        	  						}    
 	          }
 			} 
 	}
+	
+	public void editOppLine(){
+		clickEditOppLine().click();
+		waitFor(8).seconds();
+		selectSize().selectByVisibleText("10x2");
+		waitFor(4).seconds();
+	}
+	public void oppLinesShouldBeUpdated(){
+		
+		clickOppLineSave().click();
+		waitFor(15).seconds();
+		Thucydides.takeScreenshot();
+	}
 	public void validateOppotunityLineRecord(){
 		
-		/*clickOppLineSave().click();
-		waitFor(15).seconds();*/
 		System.out.println("OppLine Creation successful --> :  "+getDriver().getCurrentUrl());
 		Thucydides.takeScreenshot();
 		
@@ -232,6 +243,7 @@ public class opportunityToOrderPage extends PageObject  {
 		 getDriver().switchTo().frame(getDriver().findElement(By.tagName("iframe")));
      	 WebElement element = getDriver().switchTo().activeElement();
      	 waitFor(2).seconds();
+     	 System.out.println("Order id is --------------------->   "+orderID().getText());
 		 addPackage().click();
 		 waitFor(4).seconds();
 		 selectModule().selectByVisibleText("10x2");
@@ -246,15 +258,26 @@ public class opportunityToOrderPage extends PageObject  {
 		 waitFor(3).seconds();
 		 supplyPriceType().selectByVisibleText("UserRevenue");
 		 waitFor(1).seconds();
-		 supplyPrice().type("10");
+		 supplyPrice().type("2000");
 		 waitFor(1).seconds();
 		 updateInsLevelRevenue().click();
 		 waitFor(5).seconds();
-		 /*System.out.println("Order id is --------------------->   "+orderID().getText());*/
 		 acceptOrder().click();
+		 try 
+    	 {
+	    	 WebElement prepaymentwindow1 = getDriver().switchTo().activeElement();
+	    	 waitFor(1).seconds();
+	    	 prepaymentwindow1.findElement(By.xpath("//input[@value='Prepay']")).click();
+	    	 waitFor(3).seconds();
+	    	 WebElement prepaymentwindow2 = getDriver().switchTo().activeElement();
+	    	 waitFor(1).seconds();
+	    	 prepaymentwindow2.findElement(By.xpath("//input[@value='OK']")).click();
+	     } catch (Exception NoPopUp)	 {}
 		 waitFor(15).seconds();
 		 Thucydides.takeScreenshot();
-		 getDriver().quit();
+		 clickOnRefreshTable().click();
+		 waitFor(5).seconds();
+//		 getDriver().quit();
 		 try {
 	    	 WebDriverWait wait1 = new WebDriverWait(getDriver(), 3);
 	    	 if(wait1.until(ExpectedConditions.alertIsPresent())!=null)

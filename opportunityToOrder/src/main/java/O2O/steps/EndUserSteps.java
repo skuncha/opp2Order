@@ -215,8 +215,19 @@ public class EndUserSteps extends ScenarioSteps {
 		}
 		System.out.println("\n");
 		list.clear();
-		System.out.println("List size is ------->"+list.size());
 	}
+	
+	public void editOppLines() {
+		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
+		opp2OrderPage.editOppLine();
+	}
+
+	public void oppLinesShouldBeUpdatedSuccessfully() {
+		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
+		opp2OrderPage.oppLinesShouldBeUpdated();
+	}
+	
+	
 	public void selectOpportunityLine(){
 		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
 		opp2OrderPage.selectOpportunityLinesToConvertAsOrders();

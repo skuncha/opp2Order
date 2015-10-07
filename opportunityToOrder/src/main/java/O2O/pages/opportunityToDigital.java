@@ -116,7 +116,10 @@ public class opportunityToDigital extends PageObject {
 	
 	public void oppStageAsClosedWon(){
 		closedWon().click();
-		waitFor(6).seconds();
+		waitFor(1).seconds();
+		try{getDriver().switchTo().alert().accept();}
+		catch (Exception noPopUp){}
+		waitFor(5).seconds();
 	}
 	public void OppStageShouldBeChanged(){
 		String str = oppStage().getText();

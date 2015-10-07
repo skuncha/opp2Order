@@ -172,6 +172,14 @@ public class DefinitionSteps {
 	public void verifyOppotunityLineRecord(){
 		salesExecutive.validateOppotunityLineRecord();
 	}
+	@When("Sales Executive choose to edit opplines")
+		public void editOppLine(){
+			salesExecutive.editOppLines();
+	}
+	@Then("Sales Executive should be able to edit successfully successfully")
+		public void verifychanges(){
+			salesExecutive.oppLinesShouldBeUpdatedSuccessfully();
+	}
 	@When("Sales Executive selects 'Opportunity Line(s)' to be converted as an Order")
 	public void selectOpportunityLineThatNeedsToBeConverted(){
 		salesExecutive.selectOpportunityLine();
