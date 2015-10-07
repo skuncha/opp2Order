@@ -227,6 +227,24 @@ public class EndUserSteps extends ScenarioSteps {
 		opp2OrderPage.oppLinesShouldBeUpdated();
 	}
 	
+	public void deactivateOppLine() {
+		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
+		opp2OrderPage.cancelOppLine();
+	}
+
+	public void oppLineDeactivateSuccessfully() {
+		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
+		opp2OrderPage.OppLineDeactivated();
+	}
+	
+	public void cancelOrderLine() {
+		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
+		opp2OrderPage.orderLinecancelled();
+	}
+	public void orderLineShouldBeCancelled() {
+		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
+		opp2OrderPage.verifyCancelledOrderLine();
+	}
 	
 	public void selectOpportunityLine(){
 		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);

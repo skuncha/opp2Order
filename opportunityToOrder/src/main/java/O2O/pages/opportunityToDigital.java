@@ -55,7 +55,6 @@ public class opportunityToDigital extends PageObject {
 		waitFor(5).seconds();
 	}
 	
-	
 	public void addDigitalProducts() {
 
 		clickOnAddDigitalProducts().click();

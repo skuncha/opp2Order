@@ -57,10 +57,6 @@ public class DefinitionSteps {
     	salesExecutive.accessOpportunityPage();
     }
     
-/*    @When("  Sales Executive clicks on 'New' button")
-    public void clickOnNewButtonUnderAccountsTab(){
-    	salesExecutive.clickOnNewBtnUnderAccountsTab();
-    }*/
     @When("  Sales Executive search for an account on Account Search Screen using $searchAccountName")
     public void clickOnSearchButtonFromAccountsSearchScreen(String searchAccountName){
     	salesExecutive.searchForCustomerPreviousAccount(searchAccountName);
@@ -180,6 +176,15 @@ public class DefinitionSteps {
 		public void verifychanges(){
 			salesExecutive.oppLinesShouldBeUpdatedSuccessfully();
 	}
+	@When("Sales Executive wish to deactivate Oppline")
+	public void deactivateOpportunityLine(){
+		salesExecutive.deactivateOppLine();
+	}
+	
+	@Then("Sales Executive should be able to deactivate Oppline successfully")
+	public void opportunityLineShouldBeDeactivatedSuccessfully(){
+		salesExecutive.oppLineDeactivateSuccessfully();
+	}
 	@When("Sales Executive selects 'Opportunity Line(s)' to be converted as an Order")
 	public void selectOpportunityLineThatNeedsToBeConverted(){
 		salesExecutive.selectOpportunityLine();
@@ -188,7 +193,14 @@ public class DefinitionSteps {
 	public void clickOnConvertButton(){
 		salesExecutive.convertSelectedOpportunityLines();
 	}
-	
+	@When("When Sales Executive wish to cancel Order line")
+	public void clickOncancelOrderLine(){
+		salesExecutive.cancelOrderLine();
+	}
+	@Then("Sales Executive should see line status as cancelled and price on it becomes zero")
+	public void rrderLineShouldBeCancelledSuccessfully(){
+		salesExecutive.orderLineShouldBeCancelled();
+	}
 	@When("Sales Executive clicks on 'New Account Mapping' link and creates accoutMapping")
 	public void newAccountMappingWithSourceSystemInformation(){
 		salesExecutive.createAccountMapping();
