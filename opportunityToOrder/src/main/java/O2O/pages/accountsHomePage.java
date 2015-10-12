@@ -305,7 +305,7 @@ public class accountsHomePage extends PageObject {
 			CCICustomerMail().click();
 			waitFor(5).seconds();
 			getDriver().switchTo().alert().accept();
-			waitFor(12).seconds();
+			waitFor(15).seconds();
 			getDriver().switchTo().alert().accept();
 			waitFor(5).seconds();
 		} catch (Exception syncfailed) {
