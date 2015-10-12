@@ -1,7 +1,7 @@
 !--  srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systemtest
 !--  srinivasa.kuncha@mailnewspapers.co.uk.mail.systemtest
 
-Scenario: Sales Executive will be able to cancel an order line
+Scenario: 12. Sales Executive will be able to cancel an order line
 
 Meta:
 @author Srinivasa Kuncha

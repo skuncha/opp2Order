@@ -1,7 +1,7 @@
 !--  srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systemtest
 !--  srinivasa.kuncha@mailnewspapers.co.uk.mail.systemtest
 
-Scenario: Sales Executive will be able to create Opportunity to Digital line 
+Scenario: 1. Sales Executive will be able to create Opportunity to Digital line 
 
 Meta:
 @author Srinivasa Kuncha
@@ -38,7 +38,7 @@ Examples:
 |username																	|password		|searchAccountName	|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to edit Opportunity to Digital line 
+Scenario: 2. Sales Executive will be able to edit Opportunity to Digital line 
 
 Meta:
 @author Srinivasa Kuncha
@@ -76,7 +76,7 @@ Examples:
 |username															|password		|searchAccountName	|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 			|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to create new line using copy functionality
+Scenario: 3. Sales Executive will be able to create new line using copy functionality
 
 Meta:
 @author Srinivasa Kuncha
@@ -115,7 +115,7 @@ Examples:
 |username															|password		|searchAccountName	|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 			|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to copy start and end dates as same on all lines using copydates function
+Scenario: 4. Sales Executive will be able to copy start and end dates as same on all lines using copydates function
 Meta:
 @author Srinivasa Kuncha
 @tags feature: OpportunityToDigital
@@ -153,7 +153,7 @@ Examples:
 |username															|password		|searchAccountName	|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 			|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to create Opportunity from the selected Digital lines 
+Scenario: 5. Sales Executive will be able to create Opportunity from the selected Digital lines 
 
 Meta:
 @author Srinivasa Kuncha
@@ -191,7 +191,7 @@ Examples:
 |username																	|password		|searchAccountName	|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to de-activate Opportunity to Digital line 
+Scenario: 6. Sales Executive will be able to de-activate Opportunity to Digital line 
 
 Meta:
 @author Srinivasa Kuncha
@@ -229,7 +229,7 @@ Examples:
 |username																	|password		|searchAccountName	|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to set the Oppoutunity Stage as Closed Won when opp has Digital lines 
+Scenario: 7. Sales Executive will be able to set the Oppoutunity Stage as Closed Won when opp has Digital lines 
 
 Meta:
 @author Srinivasa Kuncha
@@ -271,7 +271,7 @@ Examples:
 |username																	|password		|searchAccountName	|file											|error										 	|
 |srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|Lines can not be added to closed opportunity.	|
 
-Scenario: Sales Executive will be able to set the Oppoutunity Stage as Closed Lost when opp has Digital lines 
+Scenario: 8. Sales Executive will be able to set the Oppoutunity Stage as Closed Lost when opp has Digital lines 
 
 Meta:
 @author Srinivasa Kuncha

@@ -5,7 +5,7 @@ In order to Test OpportunityToOrder user journeys
 As a Sales Reprasentative
 I want to login to SalesforceGlue and able to create opportunities, opportunity lines and orders
 
-Scenario: Sales Executive will be able to create 20 opplines in one go and able to edit opplines
+Scenario: 1. Sales Executive will be able to create 20 opplines in one go and able to edit opplines
 
 Meta:
 @author Srinivasa Kuncha
@@ -49,7 +49,7 @@ Examples:
 |username																	|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file														|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest								|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrderWith20lines.csv		|
 
-Scenario: Sales Executive will be able to create DATEFLEX order using O2O for a Private Advertiser
+Scenario: 2. Sales Executive will be able to create DATEFLEX order using O2O for a Private Advertiser
 
 Meta:
 @author Srinivasa Kuncha
@@ -96,7 +96,7 @@ Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file													|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrderDateflex.csv		|
 
-Scenario: Sales Executive will be able to create opportunityToOrder for a customer type Brand and whose parent is Client 
+Scenario: 3. Sales Executive will be able to create opportunityToOrder for a customer type Brand and whose parent is Client 
 
 Meta:
 @author Srinivasa Kuncha
@@ -144,7 +144,7 @@ Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to create opportunityToOrder for a customer type Brand whose parent is Direct Advertiser 
+Scenario: 4. Sales Executive will be able to create opportunityToOrder for a customer type Brand whose parent is Direct Advertiser 
 
 Meta:
 @author Srinivasa Kuncha
@@ -190,7 +190,7 @@ Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to create opportunityToOrder for a Charity Advertiser
+Scenario: 5. Sales Executive will be able to create opportunityToOrder for a Charity Advertiser
 
 Meta:
 @author Srinivasa Kuncha
@@ -237,7 +237,7 @@ Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to create opportunityToOrder for a Direct Advertiser
+Scenario: 6. Sales Executive will be able to create opportunityToOrder for a Direct Advertiser
 
 Meta:
 @author Srinivasa Kuncha
@@ -284,7 +284,7 @@ Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to create opportunityToOrder for a Private Advertiser
+Scenario: 7. Sales Executive will be able to create opportunityToOrder for a Private Advertiser
 
 Meta:
 @author Srinivasa Kuncha
@@ -330,7 +330,7 @@ Examples:
 |username												|password		|searchAccountName	|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to create opportunityToOrder for a Client
+Scenario: 8. Sales Executive will be able to create opportunityToOrder for a Client
 
 Meta:
 @author Srinivasa Kuncha
@@ -377,7 +377,7 @@ Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to see non converted opplines moved to Deactivated table when opp status changed as ClosedWon 
+Scenario: 9. Sales Executive will be able to see non converted opplines moved to Deactivated table when opp status changed as ClosedWon 
 
 Meta:
 @author Srinivasa Kuncha
@@ -421,7 +421,7 @@ Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
-Scenario: Sales Executive will be able to create opportunityToOrder and change the opp status as ClosedWon
+Scenario: 10. Sales Executive will be able to create opportunityToOrder and change the opp status as ClosedWon
 
 Meta:
 @author Srinivasa Kuncha
@@ -468,7 +468,7 @@ Examples:
 |srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
 
-Scenario: Sales Executive will be able to cancel an oppline
+Scenario: 11. Sales Executive will be able to cancel an oppline
 
 Meta:
 @author Srinivasa Kuncha
