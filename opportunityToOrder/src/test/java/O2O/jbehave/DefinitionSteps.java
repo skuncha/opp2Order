@@ -219,9 +219,18 @@ public class DefinitionSteps {
 		salesExecutive.validateDigitalLineRecord();
 	}
 
-	@Then("Sales Executive should be able to update sales price on the Digital Line")
+	@Then("Sales Executive should be able to update line description on the Digital Line")
 	public void updateDigitalLines(){
 		salesExecutive.editExitingDigitalLines();
+	}
+	@Then("Sales Executive should be able to create new line using copy functionality")
+	public void createNewLineUsingCopyFunction(){
+		salesExecutive.copyNewLineAndSave();
+	}
+	
+	@Then("Sales Executive should be able to copydates on '$NoOfLines' new lines copied from existing line")
+	public void copyDatesOnAllLines(int NoOfLines){
+		salesExecutive.copyDates(NoOfLines);
 	}
 	
 	@Then("Sales Executive should be able to deactivate Digital Line")

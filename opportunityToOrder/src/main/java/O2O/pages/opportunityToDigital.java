@@ -1,9 +1,14 @@
 package O2O.pages;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.openqa.selenium.By;
 
 import net.thucydides.core.pages.PageObject;
 import net.thucydides.core.pages.WebElementFacade;
+import net.thucydides.core.reports.history.SystemDateProvider;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -11,7 +16,8 @@ public class opportunityToDigital extends PageObject {
 	
 	public static String lnDesc, oppName;
 	long timeNow = System.currentTimeMillis();
-
+/*	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+	Date sysdate = new Date();*/
 	
 	private WebElementFacade accountMapping() 			 {	return element(By.xpath("//div[14]/div/div/div/table/tbody/tr/td[2]/input")); 			}
 	private WebElementFacade sourceSystem() 			 {	return element(By.id("00ND0000005WVcR")); 												}
@@ -23,8 +29,10 @@ public class opportunityToDigital extends PageObject {
 	private WebElementFacade clickOnNext() 				 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id972"));   				}
 	private WebElementFacade enterSalesPrice() 			 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1007:0:j_id1036")); 	}
 	private WebElementFacade saveDigitalLines() 		 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1057")); 				}
-	private WebElementFacade selectDigitalLine() 		 {	return element(By.xpath("//span[3]/table/tbody/tr/td/input")); 							}
+	private WebElementFacade selectDigitalLine() 		 {	return element(By.xpath("//span[3]/table/tbody/tr/td[1]/input")); 							}
 	private WebElementFacade editDigitalLine() 		 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1133")); 				}
+	private WebElementFacade copyLine() 		 	 	 {	return element(By.xpath("//table/tbody/tr/td[8]/img")); 								}
+	private WebElementFacade copydates() 		 	 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1058")); 				}
 	private WebElementFacade deactivateDigitalLine() 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1134")); 				}
 	private WebElementFacade deactivateReason() 	 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1091:j_id1092")); 		}
 	private WebElementFacade deactivateReasonSave() 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1096")); 				}
@@ -39,7 +47,11 @@ public class opportunityToDigital extends PageObject {
 	private WebElementFacade closedLostreason() 		 {  return element(By.id("j_id0:opportunityForm:j_id85:j_id221:j_id222"));					}
 	private WebElementFacade closedLostSave() 			 {  return element(By.id("j_id0:opportunityForm:j_id85:j_id297"));							}
 	private WebElementFacade oppClosedError() 			 {	return element(By.xpath("//*[@id='j_id0:opportunityToDigitalForm:j_id902:j_id903']/div[2]/table/tbody/tr/td[2]/span")); }
-	
+	private WebElementFacade lineOneFID() 		 	 	 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1007:0:selectedInsertionDates")); 		}
+	private WebElementFacade lineOneProductName() 		 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1104:0:j_id1112")); 	}
+	private WebElementFacade lineTwoProductName() 		 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1104:1:j_id1112")); 	}
+	private WebElementFacade scheduledlineOneFID() 		 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1104:0:j_id1128")); 	}
+	private WebElementFacade scheduledlineTwoFID() 		 {	return element(By.id("j_id0:opportunityToDigitalForm:j_id902:j_id1104:1:j_id1128")); 	}
 	
 	public void mapAccountWithSourceSystem() {                                                                                                 
 		
@@ -89,6 +101,40 @@ public class opportunityToDigital extends PageObject {
 		assertThat(lnDesc,is(equalTo("test description")));
 	}
 
+	public void copyAndSaveALine() {
+		
+		selectDigitalLine().click();
+		waitFor(5).seconds();
+		editDigitalLine().click();
+		waitFor(5).seconds();
+		copyLine().click(); 
+		waitFor(5).seconds();
+		saveDigitalLines().click();
+		waitFor(5).seconds();
+		assertThat(lineOneProductName().getText(),is(equalTo(lineTwoProductName().getText())));
+	}
+	
+	public void copyDatesOnMltipleLines(int NoOfLines) {
+		
+	/*	String s = dateFormat.format(sysdate);*/
+		selectDigitalLine().click();
+		waitFor(5).seconds();
+		editDigitalLine().click();
+		waitFor(5).seconds();
+		while (NoOfLines > 0) {
+			copyLine().click();
+			waitFor(5).seconds();
+			NoOfLines--;
+		}
+		lineOneFID().typeAndTab("14/3/2016");
+		waitFor(1).seconds();
+		copydates().click();
+		waitFor(3).seconds();
+		saveDigitalLines().click();
+		waitFor(5).seconds();
+		assertThat(scheduledlineOneFID().getText(),is(equalTo(scheduledlineTwoFID().getText())));
+	}
+	
 	public void deactivateLines() {
 		
 		selectDigitalLine().click();
@@ -113,10 +159,10 @@ public class opportunityToDigital extends PageObject {
 		System.out.println("Copied Opportunity is :     "+getDriver().getCurrentUrl());
 	}
 	
-	public void oppStageAsClosedWon(){
+	public void oppStageAsClosedWon() {
 		closedWon().click();
 		waitFor(1).seconds();
-		try{getDriver().switchTo().alert().accept();}
+		try {	getDriver().switchTo().alert().accept();	}
 		catch (Exception noPopUp){}
 		waitFor(5).seconds();
 	}

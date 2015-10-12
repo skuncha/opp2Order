@@ -282,6 +282,15 @@ public class EndUserSteps extends ScenarioSteps {
 		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
 		digitalPage.editLines();
 	}
+	public void copyNewLineAndSave(){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.copyAndSaveALine();
+	}
+	
+	public void copyDates(int NumberOfLines){
+		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
+		digitalPage.copyDatesOnMltipleLines(NumberOfLines);
+	}
 	
 	public void cancelDigitalLine(){
 		opportunityToDigital digitalPage = getPages().getPage(opportunityToDigital.class);
