@@ -254,8 +254,14 @@ public class EndUserSteps extends ScenarioSteps {
 		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
 		opp2OrderPage.selectOpportunityLinesToConvertAsOrders();
 	}
+	public void selectMultiplePackages(){
+		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
+		opp2OrderPage.selectPackagesToConvertedAsOrders();
+	}
+	
 	public void convertSelectedOpportunityLines(){
 		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
+		opp2OrderPage.openCCIPluginToConvert();
 		opp2OrderPage.convertApprovedOppLinesAsOrder();
 	}
 	

@@ -164,9 +164,9 @@ public class DefinitionSteps {
 	public void supplyInputForNewOpportunityLine(String file) throws Exception{
 		salesExecutive.supplyInputForNewOpportunityLine(file);
 	}
-	@When(" Sales Executive supplies input data from CSV $file to create multiple Opportunity Line")
-	public void supplyInputToCreateMultipleOppLines(String file) throws Exception{
-		salesExecutive.creaetMultipleOppLines(file);
+	@When(" Sales Executive supplies input data from CSV $file1 to create multiple Opportunity Line")
+	public void supplyInputToCreateMultipleOppLines(String file1) throws Exception{
+		salesExecutive.creaetMultipleOppLines(file1);
 	}
 	
 	@Then("Sales Executive should be able to create Opportunity Line successfully")
@@ -194,6 +194,11 @@ public class DefinitionSteps {
 	public void selectOpportunityLineThatNeedsToBeConverted(){
 		salesExecutive.selectOpportunityLine();
 	}
+	@When("Sales Executive selects multiple packages to be converted as an Order")
+	public void selectMultiplePackagesToBeConvertedAsAnOrder(){
+		salesExecutive.selectMultiplePackages();
+	}
+	
 	@Then("Sales Executive should be able to open Order plugin with Opportunity Line details successfully")
 	public void clickOnConvertButton(){
 		salesExecutive.convertSelectedOpportunityLines();

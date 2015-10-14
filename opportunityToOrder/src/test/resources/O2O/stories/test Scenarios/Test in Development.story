@@ -39,7 +39,7 @@ Then Sales Executive should be able to create Opportunity successfully
 When Sales Executive clicks on 'New Opportunity Line' button to create Opportunity line
 And  Sales Executive supplies input data from CSV [file1] to create multiple Opportunity Line
 Then Sales Executive should be able to create Opportunity Line successfully
-When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
+When Sales Executive selects multiple packages to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
 
 Examples:

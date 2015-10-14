@@ -19,6 +19,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class opportunityToOrderPage extends PageObject  {
 	
+	public static int count;
+	
 	/******** Define Elements of Opportunity Registration Tab *******************************************************************************************************************************************************************/
 	
 	private WebElementFacade clickOnOppToOrderBtn() { 		return element(By.cssSelector("input[value='Opportunity To Order']")); 							}
@@ -95,7 +97,7 @@ public class opportunityToOrderPage extends PageObject  {
 	 private WebElementFacade acceptOrder()   	 	{ return element(By.xpath("//nav[button='Accept']/button[3]"));																	} 
 	 private WebElementFacade orderID()      	 	{ return element(By.xpath("//fieldset/div[1]/div/p")); 																			}
 	 private WebElementFacade clickOnRefreshTable()	{ return element(By.name("j_id0:opportunityToPrintForm:j_id329:j_id609")); 			    										}
-	 private WebElementFacade deactivateTable()		{ return element(By.xpath("//*[@id='j_id0:opportunityToPrintForm:j_id313:sectionheadercustomID']/div[1]")); 			    		}
+	 private WebElementFacade deactivateTable()		{ return element(By.xpath("//*[@id='j_id0:opportunityToPrintForm:j_id329:sectionheadercustomID']/div[1]")); 			    		}
 	
 	 
 /*********************************************************************************************************************************************************************************************************/
@@ -259,7 +261,6 @@ public class opportunityToOrderPage extends PageObject  {
 			return true;
 		return false;
 	}
-/* middle of dev*/
 	public void creaetMultipleOppLinesUsingCSV(String CSVfile) throws Exception {
 		File filePath = new File(CSVfile);
 		if (filePath.isFile()) 
@@ -267,6 +268,7 @@ public class opportunityToOrderPage extends PageObject  {
 				String file = filePath.getAbsolutePath();
 				CSVTestDataSource testDataSrc = new CSVTestDataSource(file);
 				int s = testDataSrc.getData().size();
+				count = s;
 				for (Map<String, String> record : testDataSrc.getData()) 
 				{
 						System.out.println("records in the file is s --->  "+s);
@@ -282,11 +284,11 @@ public class opportunityToOrderPage extends PageObject  {
 								selectPublication().selectByVisibleText(record.get("publication"));
 								waitFor(5).seconds();
 								selectSection().selectByVisibleText(record.get("section"));
-								waitFor(5).seconds();
+								waitFor(4).seconds();
 								selectSubSection().selectByVisibleText(record.get("subsection"));
-								waitFor(5).seconds();
+								waitFor(4).seconds();
 								selectZones().selectByVisibleText(record.get("zones"));
-								waitFor(5).seconds();
+								waitFor(7).seconds();
 								enterInsertionDate().typeAndTab(record.get("insertionDate"));
 								waitFor(1).seconds();
 								if (Dateflex.equalsIgnoreCase("Y"))
@@ -295,13 +297,15 @@ public class opportunityToOrderPage extends PageObject  {
 									waitFor(2).second();
 								}
 								clickOppLineSave().click();
-								waitFor(15).seconds();
+								waitFor(12).seconds();
 							} catch (Exception e1) {}
-						if (s==0){
-							s--;
-							}
-						else
-							clickOnNewOppLineBtn().click();
+						if (s==1)
+							System.out.println("Iterations Completed --->  "+s);
+						else {
+								clickOnNewOppLineBtn().click();
+								waitFor(4).seconds();
+								s--;
+							 }
 				}
 		}
 }
@@ -314,19 +318,34 @@ public class opportunityToOrderPage extends PageObject  {
 	}
 
 	public void selectOpportunityLinesToConvertAsOrders() {
+		
 		selectOppLineToBeConvertedCB().click();
 		waitFor(8).seconds();
 	}
-
-	public void convertApprovedOppLinesAsOrder() {
-		clickOnCreateSelectedLineinCCI().click();
+public void selectPackagesToConvertedAsOrders() {
+		
+		count = count*2;
+		while (count > 0){
+			WebElementFacade selectPackages =  element(By.xpath("//*[@id='inprogressTable']/tbody/tr["+count+"]/td[1]/input"));
+			selectPackages.click();
+			waitFor(8).seconds();
+			count= count-2;
+		}
+	}
+	
+  public void openCCIPluginToConvert(){
+	  	clickOnCreateSelectedLineinCCI().click();
 		waitFor(1).seconds();
 		getDriver().switchTo().activeElement();
 		waitFor(1).seconds();
 		acceptAlert().click();
 		waitFor(45).seconds();
+  }
+
+	public void convertApprovedOppLinesAsOrder() {
+		
 		getDriver().switchTo().frame(
-				getDriver().findElement(By.tagName("iframe")));
+		getDriver().findElement(By.tagName("iframe")));
 		WebElement element = getDriver().switchTo().activeElement();
 		waitFor(2).seconds();
 		System.out.println("Order id is --------------------->   "
