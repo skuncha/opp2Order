@@ -1,11 +1,13 @@
 !--  srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systemtest
 !--  srinivasa.kuncha@mailnewspapers.co.uk.mail.systemtest
 
-Scenario: 12. Sales Executive will be able to cancel an order line
+Scenario: 13. Sales Executive will be able to create an order with multiple packages
 
 Meta:
 @author Srinivasa Kuncha
 @tags feature: OpportunityToOrder
+@skip 
+@ignored true
 
 Given Sales Executive is on the Salesfoce Login Page
 When  Sales Executive login to glue with valid credentials by supplying [username] and [password]
@@ -39,9 +41,7 @@ And  Sales Executive supplies input data from CSV [file] to create Opportunity L
 Then Sales Executive should be able to create Opportunity Line successfully
 When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
-When When Sales Executive wish to cancel Order line
-Then Sales Executive should see line status as cancelled and price on it becomes zero
 
 Examples:
 |username												|password		|searchAccountName	|file														|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|src\main\resources\OpportunityToOrderSingleLine.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.prodmirror		|amma1234		|xyz123				|src\main\resources\OpportunityToOrderSingleLine.csv		|
