@@ -161,9 +161,14 @@ public class DefinitionSteps {
 		salesExecutive.clickOnNewOpportunityLine();
 	}
 	@When(" Sales Executive supplies input data from CSV $file to create Opportunity Line")
-	public void supplyInpurForNewOpportunityLine(String file) throws Exception{
+	public void supplyInputForNewOpportunityLine(String file) throws Exception{
 		salesExecutive.supplyInputForNewOpportunityLine(file);
 	}
+	@When(" Sales Executive supplies input data from CSV $file to create multiple Opportunity Line")
+	public void supplyInputToCreateMultipleOppLines(String file) throws Exception{
+		salesExecutive.creaetMultipleOppLines(file);
+	}
+	
 	@Then("Sales Executive should be able to create Opportunity Line successfully")
 	public void verifyOppotunityLineRecord(){
 		salesExecutive.validateOppotunityLineRecord();

@@ -203,8 +203,12 @@ public class EndUserSteps extends ScenarioSteps {
 	public void supplyInputForNewOpportunityLine(String file) throws Exception{ 
 		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
 		opp2OrderPage.createOpportunityLineUsingCSV(file);
-		
 	}
+	public void creaetMultipleOppLines(String file) throws Exception{ 
+		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
+		opp2OrderPage.creaetMultipleOppLinesUsingCSV(file);
+	}
+
 	public void validateOppotunityLineRecord(){
 		opportunityToOrderPage opp2OrderPage = getPages().get(opportunityToOrderPage.class);
 		opp2OrderPage.validateOppotunityLineRecord();

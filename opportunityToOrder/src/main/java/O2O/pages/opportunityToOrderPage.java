@@ -94,7 +94,7 @@ public class opportunityToOrderPage extends PageObject  {
 	 private WebElementFacade updateInsLevelRevenue(){ return element(By.xpath("//tbody/tr[23]/td[3]/div/span/button/i"));							    							}
 	 private WebElementFacade acceptOrder()   	 	{ return element(By.xpath("//nav[button='Accept']/button[3]"));																	} 
 	 private WebElementFacade orderID()      	 	{ return element(By.xpath("//fieldset/div[1]/div/p")); 																			}
-	 private WebElementFacade clickOnRefreshTable()	{ return element(By.name("j_id0:opportunityToPrintForm:j_id313:j_id592")); 			    										}
+	 private WebElementFacade clickOnRefreshTable()	{ return element(By.name("j_id0:opportunityToPrintForm:j_id329:j_id609")); 			    										}
 	 private WebElementFacade deactivateTable()		{ return element(By.xpath("//*[@id='j_id0:opportunityToPrintForm:j_id313:sectionheadercustomID']/div[1]")); 			    		}
 	
 	 
@@ -212,7 +212,7 @@ public class opportunityToOrderPage extends PageObject  {
 			}
 		}
 	}
-
+	
 	public void editOppLine() {
 		clickEditOppLine().click();
 		waitFor(8).seconds();
@@ -259,10 +259,56 @@ public class opportunityToOrderPage extends PageObject  {
 			return true;
 		return false;
 	}
-
+/* middle of dev*/
+	public void creaetMultipleOppLinesUsingCSV(String CSVfile) throws Exception {
+		File filePath = new File(CSVfile);
+		if (filePath.isFile()) 
+		{
+				String file = filePath.getAbsolutePath();
+				CSVTestDataSource testDataSrc = new CSVTestDataSource(file);
+				int s = testDataSrc.getData().size();
+				for (Map<String, String> record : testDataSrc.getData()) 
+				{
+						System.out.println("records in the file is s --->  "+s);
+			
+						try {
+								String Dateflex = record.get("dateflex");
+								selectPackage().selectByVisibleText(record.get("package"));
+								waitFor(5).seconds();
+								enterOrderPO().type(record.get("insertionPO"));
+								enterSalesPrice().type("2000");
+								waitFor(1).seconds();
+								// selectTitle().selectByVisibleText(record.get("title"));
+								selectPublication().selectByVisibleText(record.get("publication"));
+								waitFor(5).seconds();
+								selectSection().selectByVisibleText(record.get("section"));
+								waitFor(5).seconds();
+								selectSubSection().selectByVisibleText(record.get("subsection"));
+								waitFor(5).seconds();
+								selectZones().selectByVisibleText(record.get("zones"));
+								waitFor(5).seconds();
+								enterInsertionDate().typeAndTab(record.get("insertionDate"));
+								waitFor(1).seconds();
+								if (Dateflex.equalsIgnoreCase("Y"))
+								{
+									selectDateflexCB().click();
+									waitFor(2).second();
+								}
+								clickOppLineSave().click();
+								waitFor(15).seconds();
+							} catch (Exception e1) {}
+						if (s==0){
+							s--;
+							}
+						else
+							clickOnNewOppLineBtn().click();
+				}
+		}
+}
+	
 	public void validateOppotunityLineRecord() {
 
-		System.out.println("OppLine Creation successful --> :  "
+		System.out.println("Opportunity Created Successful --> :  "
 				+ getDriver().getCurrentUrl());
 		Thucydides.takeScreenshot();
 	}

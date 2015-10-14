@@ -554,4 +554,4 @@ Then Sales Executive should see line status as cancelled and price on it becomes
 
 Examples:
 |username												|password		|searchAccountName	|file														|
-|srinivasa.kuncha@mailnewspapers.co.uk.prodmirror		|amma1234		|xyz123				|src\main\resources\OpportunityToOrderSingleLine.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|src\main\resources\OpportunityToOrderSingleLine.csv		|

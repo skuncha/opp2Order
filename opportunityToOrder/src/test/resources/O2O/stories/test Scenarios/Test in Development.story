@@ -37,11 +37,11 @@ When Sales Executive clicks on 'Opportunity To Order' link to create Opportunity
 And  Sales Executive supplies input data from CSV [file] to create Opportunity
 Then Sales Executive should be able to create Opportunity successfully
 When Sales Executive clicks on 'New Opportunity Line' button to create Opportunity line
-And  Sales Executive supplies input data from CSV [file] to create Opportunity Line
+And  Sales Executive supplies input data from CSV [file1] to create multiple Opportunity Line
 Then Sales Executive should be able to create Opportunity Line successfully
 When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
 
 Examples:
-|username												|password		|searchAccountName	|file														|
-|srinivasa.kuncha@mailnewspapers.co.uk.prodmirror		|amma1234		|xyz123				|src\main\resources\OpportunityToOrderSingleLine.csv		|
+|username												|password		|searchAccountName	|file														|file1														|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|src\main\resources\OpportunityToOrderSingleLine.csv		|src\main\resources\OpportunityToOrderMultipackage.csv		|
