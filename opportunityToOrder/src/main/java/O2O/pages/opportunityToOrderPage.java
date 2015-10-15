@@ -88,6 +88,7 @@ public class opportunityToOrderPage extends PageObject  {
 	 private WebElementFacade addPackage()   	 	{ return element(By.xpath("//fieldset/div/div/div/h4/a/span"));																	}
 	 private WebElementFacade selectModule()   	 	{ return element(By.id("Order.Material:material.moduleCode"));																	}
 	 private WebElementFacade selectPrice()   	 	{ return element(By.xpath(".//*[@id='SchedulingAccordion']/div/div[3]/div[1]/h4/a/span"));										}
+	 private WebElementFacade selectPrice1()   	 	{ return element(By.xpath("//*[@id='price-details-accordion']/div/h4/a/span"));													}
 	 private WebElementFacade selectInsertion()   	{ return element(By.xpath("//*[@id='ActivePriceDetailView']/label[3]"));														}
 	 private WebElementFacade selectedInsertionDate(){ return element(By.xpath("//fieldset/div[2]/div/div/div[1]/div[2]/table/thead/tr/th[2]/a"));									}
 	 private WebElementFacade selectBasePrice()	 	{ return element(By.xpath("//tbody/tr[14]/td[1]/a"));																			}
@@ -97,7 +98,7 @@ public class opportunityToOrderPage extends PageObject  {
 	 private WebElementFacade acceptOrder()   	 	{ return element(By.xpath("//nav[button='Accept']/button[3]"));																	} 
 	 private WebElementFacade orderID()      	 	{ return element(By.xpath("//fieldset/div[1]/div/p")); 																			}
 	 private WebElementFacade clickOnRefreshTable()	{ return element(By.name("j_id0:opportunityToPrintForm:j_id329:j_id609")); 			    										}
-	 private WebElementFacade deactivateTable()		{ return element(By.xpath("//*[@id='j_id0:opportunityToPrintForm:j_id329:sectionheadercustomID']/div[1]")); 			    		}
+	 private WebElementFacade deactivateTable()		{ return element(By.xpath("//*[@id='j_id0:opportunityToPrintForm:j_id329:sectionheadercustomID']/div[1]")); 			    	}
 	
 	 
 /*********************************************************************************************************************************************************************************************************/
@@ -354,8 +355,13 @@ public void selectPackagesToConvertedAsOrders() {
 		waitFor(4).seconds();
 		selectModule().selectByVisibleText("10x2");
 		waitFor(6).seconds();
+		try{
 		selectPrice().click();
 		waitFor(3).seconds();
+		}catch (Exception multipack) {
+			selectPrice1().click();
+			waitFor(3).seconds();
+		}
 		selectInsertion().click();
 		waitFor(3).seconds();
 		selectedInsertionDate().click();
