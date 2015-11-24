@@ -44,4 +44,4 @@ Then Sales Executive should be able to open Order plugin with Opportunity Line d
 
 Examples:
 |username												|password		|searchAccountName	|file														|file1														|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|src\main\resources\OpportunityToOrderSingleLine.csv		|src\main\resources\OpportunityToOrderMultipackage.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|amma1234		|xyz123				|src\main\resources\OpportunityToOrderSingleLine.csv		|src\main\resources\OpportunityToOrderMultipackage.csv		|

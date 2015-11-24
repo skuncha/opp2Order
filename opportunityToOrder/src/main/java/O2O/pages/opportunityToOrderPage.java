@@ -64,6 +64,7 @@ public class opportunityToOrderPage extends PageObject  {
 	private WebElementFacade enterSizeColumns() 	{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id329:j_id333:0:j_id425:0:j_id427:j_id468:j_id470")); 			}*/
 	
 	/******** Define Elements For MailPlus Package  ******************************************************************************************************************************************************/
+	
 	private WebElementFacade selectDateflexCB()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id329:j_id333:0:j_id425:0:j_id427:j_id450:j_id453")); 			}
 	private WebElementFacade selectWebsite()		{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id329:j_id333:0:j_id425:0:j_id427:j_id428:0:j_id429:j_id433")); 	}
 	private WebElementFacade selectAdUnit()			{ 		return element(By.name("j_id0:opportunityToPrintForm:j_id329:j_id333:0:j_id425:0:j_id427:j_id428:4:j_id429:j_id433")); 	}
@@ -80,11 +81,13 @@ public class opportunityToOrderPage extends PageObject  {
 	private WebElementFacade bookedPrice() 			{		return element(By.id("j_id0:opportunityToPrintForm:j_id329:j_id648:0:j_id790")); 										}
 	private WebElementFacade yieldvalue() 			{		return element(By.id("j_id0:opportunityToPrintForm:j_id329:j_id648:0:j_id793")); 										}
 	private WebElementFacade acceptAlert()			{ 		return element(By.name("j_id0:popUpFrame2:j_id47")); 																	}
+    private WebElementFacade selectOppLineToBeConvertedCB()	 { 		return element(By.xpath("//*[@id='inprogressTable']/tbody/tr[1]/td[1]/input")); 								}
+	private WebElementFacade clickOnCreateSelectedLineinCCI(){ 		return element(By.name("j_id0:opportunityToPrintForm:j_id329:j_id805")); 			   							} 
+	private WebElementFacade clickOnRefreshTable()			 { return element(By.name("j_id0:opportunityToPrintForm:j_id329:j_id609")); 			    							}
+	private WebElementFacade deactivateTable()		{ return element(By.xpath("//*[@id='j_id0:opportunityToPrintForm:j_id329:sectionheadercustomID']/div[1]")); 			    	}
 	
 	/******** Define Elements of Opportunity Line which will be converted to Order in CCI ***************************************************************************************************************/	
 	
-	 private WebElementFacade selectOppLineToBeConvertedCB()	 { 		return element(By.xpath("//*[@id='inprogressTable']/tbody/tr[1]/td[1]/input")); 							}
-	 private WebElementFacade clickOnCreateSelectedLineinCCI()	 { 		return element(By.name("j_id0:opportunityToPrintForm:j_id329:j_id805")); 			   						}
 	 private WebElementFacade addPackage()   	 	{ return element(By.xpath("//fieldset/div/div/div/h4/a/span"));																	}
 	 private WebElementFacade selectModule()   	 	{ return element(By.id("Order.Material:material.moduleCode"));																	}
 	 private WebElementFacade selectPrice()   	 	{ return element(By.xpath(".//*[@id='SchedulingAccordion']/div/div[3]/div[1]/h4/a/span"));										}
@@ -97,9 +100,6 @@ public class opportunityToOrderPage extends PageObject  {
 	 private WebElementFacade updateInsLevelRevenue(){ return element(By.xpath("//tbody/tr[23]/td[3]/div/span/button/i"));							    							}
 	 private WebElementFacade acceptOrder()   	 	{ return element(By.xpath("//nav[button='Accept']/button[3]"));																	} 
 	 private WebElementFacade orderID()      	 	{ return element(By.xpath("//fieldset/div[1]/div/p")); 																			}
-	 private WebElementFacade clickOnRefreshTable()	{ return element(By.name("j_id0:opportunityToPrintForm:j_id329:j_id609")); 			    										}
-	 private WebElementFacade deactivateTable()		{ return element(By.xpath("//*[@id='j_id0:opportunityToPrintForm:j_id329:sectionheadercustomID']/div[1]")); 			    	}
-	
 	 
 /*********************************************************************************************************************************************************************************************************/
 	
@@ -122,7 +122,7 @@ public class opportunityToOrderPage extends PageObject  {
 					oppName().type(record.get("oppName"));
 					waitFor(1).second();
 					selectOppStage().selectByVisibleText(record.get("oppStage"));
-					waitFor(4).second();
+					waitFor(3).second();
 					enterOppStartDate().type(record.get("oppStartDate"));
 					enterOppEndDate().type(record.get("oppEndDate"));
 					enterOppCloseDate().type(record.get("oppCloseDate")); 
@@ -135,7 +135,7 @@ public class opportunityToOrderPage extends PageObject  {
 						waitFor(1).second();
 					}
 					selectOppType().selectByVisibleText(record.get("oppType"));
-					waitFor(4).second();
+					waitFor(3).second();
 					
 					/*selectOppContactRole().selectByVisibleText(record.get("oppContactRole")); 
 					waitFor(1).second();

@@ -47,7 +47,7 @@ Then Sales Executive should be able to edit successfully successfully
 
 Examples:
 |username																	|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file														|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest								|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrderWith20lines.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest								|amma1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrderWith20lines.csv		|
 
 Scenario: 2. Sales Executive will be able to create DATEFLEX order using O2O for a Private Advertiser
 
@@ -94,7 +94,7 @@ Then Sales Executive should be able to open Order plugin with Opportunity Line d
 
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file													|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrderDateflex.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|amma1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrderDateflex.csv		|
 
 Scenario: 3. Sales Executive will be able to create opportunityToOrder for a customer type Brand and whose parent is Client 
 
@@ -142,7 +142,7 @@ When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|amma1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 4. Sales Executive will be able to create opportunityToOrder for a customer type Brand whose parent is Direct Advertiser 
 
@@ -188,7 +188,7 @@ When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|amma1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 5. Sales Executive will be able to create opportunityToOrder for a Charity Advertiser
 
@@ -235,7 +235,7 @@ When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|amma1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 6. Sales Executive will be able to create opportunityToOrder for a Direct Advertiser
 
@@ -282,7 +282,7 @@ When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|amma1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 7. Sales Executive will be able to create opportunityToOrder for a Private Advertiser
 
@@ -328,7 +328,7 @@ When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
 Examples:
 |username												|password		|searchAccountName	|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|amma1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 8. Sales Executive will be able to create opportunityToOrder for a Client
 
@@ -375,7 +375,7 @@ When Sales Executive selects 'Opportunity Line(s)' to be converted as an Order
 Then Sales Executive should be able to open Order plugin with Opportunity Line details successfully
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|amma1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 9. Sales Executive will be able to see non converted opplines moved to Deactivated table when opp status changed as ClosedWon 
 
@@ -419,7 +419,7 @@ Then Sales Executive should see opportunity stage changed to Closed Won successf
 
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|amma1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 10. Sales Executive will be able to create opportunityToOrder and change the opp status as ClosedWon
 
@@ -465,7 +465,7 @@ Then Sales Executive should see opportunity stage changed to Closed Won successf
 
 Examples:
 |username												|password		|searchAccountName	|mainCategory	|subCategory			|minorCategory				|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|amma1234		|xyz123				|30 - RETAIL	|30.04 - RETAIL GENERAL |30.04.00 - RETAIL GENERAL	|src\main\resources\OpportunityToOrder.csv		|
 
 
 Scenario: 11. Sales Executive will be able to cancel an oppline
@@ -509,7 +509,7 @@ Then Sales Executive should be able to deactivate Oppline successfully
 
 Examples:
 |username												|password		|searchAccountName	|file														|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|src\main\resources\OpportunityToOrderSingleLine.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|amma1234		|xyz123				|src\main\resources\OpportunityToOrderSingleLine.csv		|
 
 Scenario: 12. Sales Executive will be able to cancel an order line
 
@@ -554,4 +554,4 @@ Then Sales Executive should see line status as cancelled and price on it becomes
 
 Examples:
 |username												|password		|searchAccountName	|file														|
-|srinivasa.kuncha@mailnewspapers.co.uk.systest			|glue1234		|xyz123				|src\main\resources\OpportunityToOrderSingleLine.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.systest			|amma1234		|xyz123				|src\main\resources\OpportunityToOrderSingleLine.csv		|
