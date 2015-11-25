@@ -36,7 +36,7 @@ And  Sales Executive supplies input to create Digital Lines
 Then Sales Executive should be able to create Digital Lines successfully
 Examples:
 |username																	|password		|searchAccountName	|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|amma1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 2. Sales Executive will be able to edit Opportunity to Digital line 
 
@@ -74,7 +74,7 @@ Then Sales Executive should be able to create Digital Lines successfully
 Then Sales Executive should be able to update line description on the Digital Line
 Examples:
 |username															|password		|searchAccountName	|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 			|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 			|amma1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 3. Sales Executive will be able to create new line using copy functionality
 
@@ -113,7 +113,7 @@ Then Sales Executive should be able to create new line using copy functionality
 
 Examples:
 |username															|password		|searchAccountName	|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 			|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 			|amma1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 4. Sales Executive will be able to copy start and end dates as same on all lines using copydates function
 Meta:
@@ -151,7 +151,7 @@ Then Sales Executive should be able to copydates on '2' new lines copied from ex
 
 Examples:
 |username															|password		|searchAccountName	|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 			|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 			|amma1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 5. Sales Executive will be able to create Opportunity from the selected Digital lines 
 
@@ -189,7 +189,7 @@ Then Sales Executive should be able to create Digital Lines successfully
 Then Sales Executive selects the Digital Line and create new Opportunity using those lines
 Examples:
 |username																	|password		|searchAccountName	|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|amma1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 6. Sales Executive will be able to de-activate Opportunity to Digital line 
 
@@ -227,7 +227,7 @@ Then Sales Executive should be able to create Digital Lines successfully
 Then Sales Executive should be able to deactivate Digital Line
 Examples:
 |username																	|password		|searchAccountName	|file											|
-|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
+|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|amma1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|
 
 Scenario: 7. Sales Executive will be able to set the Oppoutunity Stage as Closed Won when opp has Digital lines 
 
@@ -269,7 +269,7 @@ Then Sales Executive should be shown error message as [error] when try to add ne
 
 Examples:
 |username																	|password		|searchAccountName	|file											|error										 	|
-|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|Lines can not be added to closed opportunity.	|
+|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|amma1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|Lines can not be added to closed opportunity.	|
 
 Scenario: 8. Sales Executive will be able to set the Oppoutunity Stage as Closed Lost when opp has Digital lines 
 
@@ -311,5 +311,5 @@ Then Sales Executive should be shown error message as [error] when try to add ne
 
 Examples:
 |username																	|password		|searchAccountName	|file											|error										 	|
-|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|test1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|Lines can not be added to closed opportunity.	|
+|srinivasa.kuncha@mailnewspapers.co.uk.mailonline.systest 					|amma1234		|xyz123				|src\main\resources\OpportunityToOrder.csv		|Lines can not be added to closed opportunity.	|
 
